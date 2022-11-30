@@ -12,5 +12,5 @@ jobs:
         with:
           node-version: 16
       - run: npm install -g pnpm
-      - run: pnpm ci
+      - run: pnpm install --frozen-lockfile
       - run: pnpm build:static
