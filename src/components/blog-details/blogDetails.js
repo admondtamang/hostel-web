@@ -1,16 +1,11 @@
-import React from "react";
-import {
-  FaWater,
-  FaMedal,
-  FaSignal,
-  FaBath,
-  MdBalcony,
-  FaLaptopHouse,
-} from "react-icons/fa";
+import React from 'react';
+import { FaWater, FaMedal, FaSignal, FaBath, MdBalcony, FaLaptopHouse } from 'react-icons/fa';
+import Lightbox from '../lightbox';
 
 const blogDetails = () => {
   return (
     <div className="SliderSection px-4 py-4">
+      <Lightbox />
       <div className="   md:flex md:gap-4">
         <div className="blog-details-left md:w-3/5 w-full mb-10 md:mb-0 ">
           <div className="information border-[1px] border-[#eaeaea] rounded-[24px] p-8">
@@ -18,21 +13,15 @@ const blogDetails = () => {
             <div className="w-14 border-b border-neutral-200 dark:border-neutral-700 pb-2"></div>
             <div className="text-neutral-6000 dark:text-neutral-300 pb-2 font-light tracking-wide">
               <span className="mt-4">
-                Providing lake views, The Symphony 9 Tam Coc in Ninh Binh
-                provides accommodation, an outdoor swimming pool, a bar, a
-                shared lounge, a garden and barbecue facilities. Complimentary
-                WiFi is provided.
+                Providing lake views, The Symphony 9 Tam Coc in Ninh Binh provides accommodation, an outdoor swimming pool, a bar, a shared
+                lounge, a garden and barbecue facilities. Complimentary WiFi is provided.
               </span>
               <br />
               <br />
-              <span>
-                There is a private bathroom with bidet in all units, along with
-                a hairdryer and free toiletries.
-              </span>
+              <span>There is a private bathroom with bidet in all units, along with a hairdryer and free toiletries.</span>
               <br /> <br />
               <span>
-                The Symphony 9 Tam Coc offers a terrace. Both a bicycle rental
-                service and a car rental service are available at the
+                The Symphony 9 Tam Coc offers a terrace. Both a bicycle rental service and a car rental service are available at the
                 accommodation, while cycling can be enjoyed nearby.
               </span>
             </div>
@@ -40,9 +29,7 @@ const blogDetails = () => {
 
           <div className="information border-[1px] border-[#eaeaea] rounded-[24px] p-8 mt-8">
             <h2 className="text-2xl font-semibold">What this place offers</h2>
-            <p className="font-light py-4">
-              About the property's amenities and services
-            </p>
+            <p className="font-light py-4">About the property's amenities and services</p>
             <div className="w-14 border-b border-neutral-200 dark:border-neutral-700 pb-2"></div>
             <div className="text-neutral-6000 dark:text-neutral-300 pb-2 font-light tracking-wide">
               <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 text-sm text-neutral-700 dark:text-neutral-300 ">
@@ -80,9 +67,7 @@ const blogDetails = () => {
 
           <div className="information border-[1px] border-[#eaeaea] rounded-[24px] p-8 mt-8">
             <h2 className="text-2xl font-semibold">Room Rates</h2>
-            <p className="font-light py-4">
-              Prices may increase on weekends or holidays
-            </p>
+            <p className="font-light py-4">Prices may increase on weekends or holidays</p>
             <div className="w-14 border-b border-neutral-200 dark:border-neutral-700 pb-2"></div>
 
             <div class="overflow-x-auto relative sm:rounded-lg">
@@ -99,37 +84,25 @@ const blogDetails = () => {
                 </thead>
                 <tbody>
                   <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                    <th
-                      scope="row"
-                      class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                       Monday - Thursday
                     </th>
                     <td class="py-4 px-6">$2999</td>
                   </tr>
                   <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th
-                      scope="row"
-                      class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                       Monday - Thursday
                     </th>
                     <td class="py-4 px-6">$1999</td>
                   </tr>
                   <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                    <th
-                      scope="row"
-                      class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                       Friday - Sunday
                     </th>
                     <td class="py-4 px-6">$99</td>
                   </tr>
                   <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th
-                      scope="row"
-                      class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                       Rent by month
                     </th>
                     <td class="py-4 px-6">$799</td>
@@ -146,18 +119,11 @@ const blogDetails = () => {
 
             <article>
               <div class="flex items-center mb-4 space-x-4">
-                <img
-                  class="w-10 h-10 rounded-full"
-                  src="/images/blogs/slider/review.webp"
-                  alt=""
-                />
+                <img class="w-10 h-10 rounded-full" src="/images/blogs/slider/review.webp" alt="" />
                 <div class="space-y-1 font-medium dark:text-white">
                   <p>
-                    Jese Leos{" "}
-                    <time
-                      datetime="2014-08-16 19:00"
-                      class="block text-sm text-gray-500 dark:text-gray-400"
-                    >
+                    Jese Leos{' '}
+                    <time datetime="2014-08-16 19:00" class="block text-sm text-gray-500 dark:text-gray-400">
                       Joined on August 2014
                     </time>
                   </p>
@@ -214,38 +180,27 @@ const blogDetails = () => {
                   <title>Fifth star</title>
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                 </svg>
-                <h3 class="ml-2 text-sm font-semibold text-gray-900 dark:text-white">
-                  Thinking to buy another one!
-                </h3>
+                <h3 class="ml-2 text-sm font-semibold text-gray-900 dark:text-white">Thinking to buy another one!</h3>
               </div>
               <footer class="mb-5 text-sm text-gray-500 dark:text-gray-400">
                 <p>
-                  Reviewed in the United Kingdom on{" "}
-                  <time datetime="2017-03-03 19:00">March 3, 2017</time>
+                  Reviewed in the United Kingdom on <time datetime="2017-03-03 19:00">March 3, 2017</time>
                 </p>
               </footer>
               <p class="mb-2 font-light text-gray-500 dark:text-gray-400">
-                This is my third Invicta Pro Diver. They are just fantastic
-                value for money. This one arrived yesterday and the first thing
-                I did was set the time, popped on an identical strap from
-                another Invicta and went in the shower with it to test the
+                This is my third Invicta Pro Diver. They are just fantastic value for money. This one arrived yesterday and the first thing
+                I did was set the time, popped on an identical strap from another Invicta and went in the shower with it to test the
                 waterproofing.... No problems.
               </p>
               <p class="mb-3 font-light text-gray-500 dark:text-gray-400">
-                It is obviously not the same build quality as those very
-                expensive watches. But that is like comparing a Citroën to a
+                It is obviously not the same build quality as those very expensive watches. But that is like comparing a Citroën to a
                 Ferrari. This watch was well under £100! An absolute bargain.
               </p>
-              <a
-                href="#"
-                class="block mb-5 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
-              >
+              <a href="#" class="block mb-5 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
                 Read more
               </a>
               <aside>
-                <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                  19 people found this helpful
-                </p>
+                <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">19 people found this helpful</p>
                 <div class="flex items-center mt-3 space-x-3 divide-x divide-gray-200 dark:divide-gray-600">
                   <a
                     href="#"
@@ -253,10 +208,7 @@ const blogDetails = () => {
                   >
                     Helpful
                   </a>
-                  <a
-                    href="#"
-                    class="pl-4 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
-                  >
+                  <a href="#" class="pl-4 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
                     Report abuse
                   </a>
                 </div>
@@ -287,9 +239,7 @@ const blogDetails = () => {
           <div className="information border-[1px] border-[#eaeaea] rounded-[24px] p-8">
             <h2 className="text-2xl font-semibold">Location</h2>
             <div className="w-14 border-b border-neutral-200 dark:border-neutral-700 pb-2"></div>
-            <div className="text-neutral-6000 dark:text-neutral-300 pb-2 font-light tracking-wide">
-              Test
-            </div>
+            <div className="text-neutral-6000 dark:text-neutral-300 pb-2 font-light tracking-wide">Test</div>
           </div>
         </div>
       </div>

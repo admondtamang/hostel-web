@@ -44,7 +44,7 @@ const Section1 = () => {
     <div>
       <div className="SliderSection px-4">
         <div className="SectionSliderNewCategories flow-root">
-          <div className="Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between mb-12 lg:mb-16 text-neutral-900 dark:text-neutral-50">
+          <div className="Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between text-neutral-900 dark:text-neutral-50">
             <div className="max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-semibold">Heading of sections</h2>
               <span className="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400">
