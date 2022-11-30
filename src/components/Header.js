@@ -1,5 +1,6 @@
 import { VscSearch } from 'react-icons/vsc';
 import Link from 'next/link';
+
 const Header = () => {
   return (
     <header>
@@ -7,13 +8,13 @@ const Header = () => {
         <div className="nc-MainNav1 relative z-10 ">
           <div className="px-4 lg:container py-4 lg:py-5 relative flex justify-between items-center mx-auto">
             <div className="hidden md:flex justify-start flex-1 items-center space-x-4 sm:space-x-10">
-              <a className="ttnc-logo inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24" href="/">
+              <Link className="ttnc-logo inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24" href="/">
                 <b>LeetTel</b>
-              </a>
+              </Link>
 
               <ul className="nc-Navigation hidden lg:flex lg:flex-wrap lg:items-center lg:space-x-1 relative">
                 <li className="menu-item menu-dropdown relative menuIsNew_lv1">
-                  <a
+                  <Link
                     aria-current="page"
                     className="inline-flex items-center text-sm xl:text-base  py-2 px-4 xl:px-5 rounded-full hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200 !font-semibold !text-neutral-900 bg-neutral-100 dark:bg-neutral-800 dark:!text-neutral-100"
                     rel="noopener noreferrer"
@@ -22,10 +23,10 @@ const Header = () => {
                     href="/"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item menu-megamenu menu-megamenu--large">
-                  <a
+                  <Link
                     className="inline-flex items-center text-sm xl:text-base font-normal text-neutral-700 dark:text-neutral-300 py-2 px-4 xl:px-5 rounded-full hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
                     rel="noopener noreferrer"
                     id="headlessui-popover-button-:r6:"
@@ -33,10 +34,10 @@ const Header = () => {
                     href="/"
                   >
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item menu-dropdown relative menuIsNew_lv1">
-                  <a
+                  <Link
                     className="inline-flex items-center text-sm xl:text-base font-normal text-neutral-700 dark:text-neutral-300 py-2 px-4 xl:px-5 rounded-full hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
                     rel="noopener noreferrer"
                     id="headlessui-popover-button-:r9:"
@@ -44,7 +45,7 @@ const Header = () => {
                     href="/"
                   >
                     Contact US
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item menu-dropdown relative ">
                   <Link
@@ -139,13 +140,13 @@ const Header = () => {
                 </button>
 
                 <div className="px-1"></div>
-                <a
+                <Link
                   className="nc-Button relative bg-[#4340CA] h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  b disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0 "
                   rel="noopener noreferrer"
                   href="/"
                 >
                   Sign up
-                </a>
+                </Link>
               </div>
               <div className="flex xl:hidden items-center">
                 <button className="text-2xl md:text-3xl w-12 h-12 rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none flex items-center justify-center">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaWater, FaMedal, FaSignal, FaBath, MdBalcony, FaLaptopHouse } from 'react-icons/fa';
 import Lightbox from '../lightbox';
+import Link from 'next/link';
 
 const blogDetails = () => {
   return (
@@ -29,7 +30,7 @@ const blogDetails = () => {
 
           <div className="information border-[1px] border-[#eaeaea] rounded-[24px] p-8 mt-8">
             <h2 className="text-2xl font-semibold">What this place offers</h2>
-            <p className="font-light py-4">About the property's amenities and services</p>
+            <p className="font-light py-4">About the propertys amenities and services</p>
             <div className="w-14 border-b border-neutral-200 dark:border-neutral-700 pb-2"></div>
             <div className="text-neutral-6000 dark:text-neutral-300 pb-2 font-light tracking-wide">
               <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 text-sm text-neutral-700 dark:text-neutral-300 ">
@@ -196,9 +197,9 @@ const blogDetails = () => {
                 It is obviously not the same build quality as those very expensive watches. But that is like comparing a Citroën to a
                 Ferrari. This watch was well under £100! An absolute bargain.
               </p>
-              <a href="#" class="block mb-5 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+              <Link href="#" class="block mb-5 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
                 Read more
-              </a>
+              </Link>
               <aside>
                 <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">19 people found this helpful</p>
                 <div class="flex items-center mt-3 space-x-3 divide-x divide-gray-200 dark:divide-gray-600">
@@ -208,9 +209,9 @@ const blogDetails = () => {
                   >
                     Helpful
                   </a>
-                  <a href="#" class="pl-4 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+                  <Link href="#" class="pl-4 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
                     Report abuse
-                  </a>
+                  </Link>
                 </div>
               </aside>
             </article>

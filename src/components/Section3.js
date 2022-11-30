@@ -1,53 +1,53 @@
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { EffectFade, Pagination } from "swiper";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-fade";
-import { Tab } from "@headlessui/react";
-import { MdStar } from "react-icons/md";
-import Link from "next/link";
+import { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { EffectFade, Pagination } from 'swiper';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
+import { Tab } from '@headlessui/react';
+import { MdStar } from 'react-icons/md';
+import Link from 'next/link';
 
 const swiperCarousel = [
   {
     id: 1,
-    Feature: "Single Room - 3 beds",
-    Name: "boys hostel",
-    Location: "kathmandu",
-    Price: "$26",
+    Feature: 'Single Room - 3 beds',
+    Name: 'boys hostel',
+    Location: 'kathmandu',
+    Price: '$26',
     Rating: 4.9,
   },
   {
-    Feature: "Single Room - 3 beds",
+    Feature: 'Single Room - 3 beds',
     id: 1,
-    Name: "girls hostel",
-    Location: "New Baneshwor",
-    Price: "$36",
+    Name: 'girls hostel',
+    Location: 'New Baneshwor',
+    Price: '$36',
     Rating: 4.9,
   },
   {
-    Feature: "Single Room - 3 beds",
+    Feature: 'Single Room - 3 beds',
     id: 1,
-    Name: "boys hostel",
-    Location: "kathmandu",
-    Price: "$26",
+    Name: 'boys hostel',
+    Location: 'kathmandu',
+    Price: '$26',
     Rating: 4.8,
   },
   {
-    Feature: "Single Room - 3 beds",
+    Feature: 'Single Room - 3 beds',
     id: 1,
-    Name: "boys hostel",
-    Location: "kathmandu",
-    Price: "$26",
+    Name: 'boys hostel',
+    Location: 'kathmandu',
+    Price: '$26',
     Rating: 4.8,
   },
   {
-    Feature: "Single Room - 3 beds",
+    Feature: 'Single Room - 3 beds',
     id: 1,
-    Name: "boys hostel",
-    Location: "kathmandu",
-    Price: "$26",
+    Name: 'boys hostel',
+    Location: 'kathmandu',
+    Price: '$26',
     Rating: 4.8,
   },
 ];
@@ -59,9 +59,7 @@ const Section3 = () => {
         <div className="SectionSliderNewCategories__PageHome_s1nc__rq_ flow-root glide--ltr glide--slider glide--swipeable">
           <div className="Section-Heading  flex flex-col sm:flex-row sm:items-end justify-between mb-12 lg:mb-16 text-neutral-900 dark:text-neutral-50">
             <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-semibold">
-                Featured places to stay
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-semibold">Featured places to stay</h2>
               <span className="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400">
                 Popular places to stay that Chisfis recommends for you
               </span>
@@ -87,8 +85,8 @@ const Section3 = () => {
               <Tab.Panels>
                 <Tab.Panel>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {swiperCarousel.map((row) => (
-                      <Link href="/blog/blog-details">
+                    {swiperCarousel.map((row, index) => (
+                      <Link href="/blog/blog-details" key={index}>
                         <div className="cards rounded-[24px] shadow-sm bg-white hover:shadow-xl hover:bg-[#F3F1F0]">
                           <Swiper
                             modules={[Pagination, EffectFade]}
@@ -100,31 +98,20 @@ const Section3 = () => {
                             loop
                           >
                             <SwiperSlide>
-                              <img
-                                className="rounded-t-[24px]"
-                                src="/images/blogs/1.jpeg"
-                              ></img>
+                              <img className="rounded-t-[24px]" src="/images/blogs/1.jpeg"></img>
                             </SwiperSlide>
 
                             <SwiperSlide>
-                              <img
-                                className="rounded-t-[24px]"
-                                src="/images/blogs/2.png"
-                              ></img>
+                              <img className="rounded-t-[24px]" src="/images/blogs/2.png"></img>
                             </SwiperSlide>
                             <SwiperSlide>
-                              <img
-                                className="rounded-t-[24px]"
-                                src="/images/blogs/3.png"
-                              ></img>
+                              <img className="rounded-t-[24px]" src="/images/blogs/3.png"></img>
                             </SwiperSlide>
                           </Swiper>
                           <div className="lower-content">
                             <div className="p-4 space-y-4">
                               <div className="space-y-2">
-                                <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                                  {row.Feature}
-                                </span>
+                                <span className="text-sm text-neutral-500 dark:text-neutral-400">{row.Feature}</span>
                                 <div className="flex items-center space-x-2">
                                   <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs text-green-800 bg-green-100">
                                     ADS
@@ -161,9 +148,7 @@ const Section3 = () => {
                               <div className="flex justify-between items-center">
                                 <span className="text-base font-semibold">
                                   {row.Price}
-                                  <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">
-                                    /night
-                                  </span>
+                                  <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">/night</span>
                                 </span>
                                 <div className="flex items-center space-x-1 text-sm">
                                   <div className="pb-[2px]">
@@ -182,9 +167,7 @@ const Section3 = () => {
                                     </svg>
                                   </div>
                                   <span className="font-medium ">{row.Rating}</span>
-                                  <span className="text-neutral-500 dark:text-neutral-400">
-                                    (28)
-                                  </span>
+                                  <span className="text-neutral-500 dark:text-neutral-400">(28)</span>
                                 </div>
                               </div>
                             </div>
@@ -203,28 +186,28 @@ const Section3 = () => {
           </div>
           <div className="Button flex justify-center mt-4">
             <Link href="/blog">
-            <button
-              type="button"
-              className="text-white bg-[#4340CA] hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-[24px] text-sm px-5 py-2.5 text-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center"
-            >
-              <svg
-                role="status"
-                className="inline mr-3 w-4 h-4 text-white animate-spin"
-                viewBox="0 0 100 101"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                type="button"
+                className="text-white bg-[#4340CA] hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-[24px] text-sm px-5 py-2.5 text-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center"
               >
-                <path
-                  d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-                  fill="#E5E7EB"
-                />
-                <path
-                  d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-                  fill="currentColor"
-                />
-              </svg>
-              Show More...
-            </button>
+                <svg
+                  role="status"
+                  className="inline mr-3 w-4 h-4 text-white animate-spin"
+                  viewBox="0 0 100 101"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                    fill="#E5E7EB"
+                  />
+                  <path
+                    d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                Show More...
+              </button>
             </Link>
           </div>
         </div>

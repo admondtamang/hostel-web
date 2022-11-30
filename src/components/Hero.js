@@ -1,36 +1,26 @@
-import React from "react";
+import React from 'react';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
     <div>
-      <div
-        class="SectionHero flex flex-col-reverse lg:flex-col relative pt-10 lg:pt-36 lg:pb-16"
-      >
+      <div class="SectionHero flex flex-col-reverse lg:flex-col relative pt-10 lg:pt-36 lg:pb-16">
         <div class="flex flex-col lg:flex-row lg:items-center px-4">
           <div class="flex-shrink-0 lg:w-1/2 flex flex-col items-start space-y-8 sm:space-y-10 pb-14 lg:pb-64 xl:pr-14 lg:mr-10 xl:mr-0">
-            <h2 class="font-medium text-4xl md:text-5xl xl:text-7xl !leading-[114%] ">
-              Hotel, car &amp; experiences
-            </h2>
+            <h2 class="font-medium text-4xl md:text-5xl xl:text-7xl !leading-[114%] ">Hotel, car &amp; experiences</h2>
             <span class="text-base md:text-lg text-neutral-500 dark:text-neutral-400">
-              Accompanying us, you have a trip full of experiences. With
-              Chisfis, booking accommodation, resort villas, hotels
+              Accompanying us, you have a trip full of experiences. With Chisfis, booking accommodation, resort villas, hotels
             </span>
             <button class="button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0  bg-[#4340ca]">
               Start your search
             </button>
           </div>
           <div class="flex-grow">
-            <img
-              class="w-full"
-              src="images/hero-right.png"
-              alt="hero"
-            />
+            <img class="w-full" src="images/hero-right.png" alt="hero" />
           </div>
         </div>
         <div class="hidden lg:block z-10 mb-12 lg:mb-0 lg:-mt-40 w-full">
-          <div
-            class="HeroSearchForm w-full max-w-6xl py-5 lg:py-0"
-          >
+          <div class="HeroSearchForm w-full max-w-6xl py-5 lg:py-0">
             <ul class="ml-2 sm:ml-6 md:ml-12 flex space-x-5 sm:space-x-8 lg:space-x-11 overflow-x-auto hiddenScrollbar">
               <li class="flex-shrink-0 flex items-center cursor-pointer text-sm lg:text-base font-medium  ">
                 <span class="block w-2.5 h-2.5 rounded-full bg-neutral-800 dark:bg-neutral-100 mr-2"></span>
@@ -50,25 +40,14 @@ const Hero = () => {
               <div class="relative flex flex-[1.5]">
                 <div class="flex flex-1 relative [ nc-hero-field-padding ] flex-shrink-0 items-center space-x-3 cursor-pointer focus:outline-none text-left  ">
                   <div class="text-neutral-300 dark:text-neutral-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="nc-icon-field"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="nc-icon-field" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="1.5"
                         d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
                       ></path>
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      ></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
                   </div>
                   <div class="flex-grow">
@@ -87,13 +66,7 @@ const Hero = () => {
                 <div class="flex-1 grid grid-cols-2 relative ">
                   <div class="relative flex [ nc-hero-field-padding ] items-center space-x-3 cursor-pointer  ">
                     <div class="text-neutral-300 dark:text-neutral-400">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="nc-icon-field"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="nc-icon-field" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -103,23 +76,13 @@ const Hero = () => {
                       </svg>
                     </div>
                     <div class="flex-1">
-                      <span class="block xl:text-lg font-semibold">
-                        Check in
-                      </span>
-                      <span class="block mt-1 text-sm text-neutral-400 leading-none font-light">
-                        Add date
-                      </span>
+                      <span class="block xl:text-lg font-semibold">Check in</span>
+                      <span class="block mt-1 text-sm text-neutral-400 leading-none font-light">Add date</span>
                     </div>
                   </div>
                   <div class="relative flex [ nc-hero-field-padding ] items-center space-x-3 cursor-pointer  ">
                     <div class="text-neutral-300 dark:text-neutral-400">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="nc-icon-field"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="nc-icon-field" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -129,12 +92,8 @@ const Hero = () => {
                       </svg>
                     </div>
                     <div class="flex-1">
-                      <span class="block xl:text-lg font-semibold">
-                        Check out
-                      </span>
-                      <span class="block mt-1 text-sm text-neutral-400 leading-none font-light">
-                        Add date
-                      </span>
+                      <span class="block xl:text-lg font-semibold">Check out</span>
+                      <span class="block mt-1 text-sm text-neutral-400 leading-none font-light">Add date</span>
                     </div>
                   </div>
                 </div>
@@ -148,13 +107,7 @@ const Hero = () => {
                     aria-expanded="false"
                   >
                     <div class="text-neutral-300 dark:text-neutral-400">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon-field"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon-field" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -164,30 +117,19 @@ const Hero = () => {
                       </svg>
                     </div>
                     <div class="flex-grow">
-                      <span class="block xl:text-lg font-semibold">
-                        {" "}
-                        Guests
-                      </span>
-                      <span class="block mt-1 text-sm text-neutral-400 leading-none font-light">
-                        Add guests
-                      </span>
+                      <span class="block xl:text-lg font-semibold"> Guests</span>
+                      <span class="block mt-1 text-sm text-neutral-400 leading-none font-light">Add guests</span>
                     </div>
                   </button>
                   <div class="relative"></div>
                   <div class="pr-2 xl:pr-4">
-                    <a
+                    <Link
                       type="button"
                       class="h-14 md:h-16 w-full md:w-16 rounded-full bg-[#4340CA] hover:bg-primary-700 flex items-center justify-center text-neutral-50 focus:outline-none"
                       href="/"
                     >
                       <span class="mr-3 md:hidden">Search</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -195,7 +137,7 @@ const Hero = () => {
                           d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                         ></path>
                       </svg>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
