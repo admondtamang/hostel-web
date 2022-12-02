@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from './Image';
 
 const Hero = () => {
   return (
@@ -15,9 +16,7 @@ const Hero = () => {
               Start your search
             </button>
           </div>
-          <div class="flex-grow">
-            <img class="w-full" src="images/hero-right.png" alt="hero" />
-          </div>
+          <div class="flex-grow">{/* <Image class="w-full" src="/images/hero-right.png" alt="hero" width="100" /> */}</div>
         </div>
         <div class="hidden lg:block z-10 mb-12 lg:mb-0 lg:-mt-40 w-full">
           <div class="HeroSearchForm w-full max-w-6xl py-5 lg:py-0">
