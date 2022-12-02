@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaWater, FaMedal, FaSignal, FaBath, MdBalcony, FaLaptopHouse } from 'react-icons/fa';
+import { FaWater, FaMedal, FaRegUser, FaSignal, FaBath, MdBalcony, FaLaptopHouse } from 'react-icons/fa';
 import Lightbox from '../lightbox';
 import Link from 'next/link';
 

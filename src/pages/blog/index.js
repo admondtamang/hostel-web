@@ -1,12 +1,12 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-// import BlogHome from '../../components/blog/BlogHome';
+import BlogHome from '../../components/blog/BlogHome';
 
 const blog = () => {
   return (
     <div>
       <Header />
-      {/* <BlogHome /> */}
+      <BlogHome />
       <Footer />
     </div>
   );

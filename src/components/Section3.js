@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { EffectFade, Pagination } from 'swiper';
@@ -53,6 +53,8 @@ const swiperCarousel = [
 ];
 
 const Section3 = () => {
+  const styleActive =
+    'Button  bg-[#4340CA] h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-2 py-2 sm:px-6 b disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0 mr-8';
   return (
     <div>
       <div className="SectionSliderNewCategories px-12 py-8 bg-[#F3F4F6] rounded-[45px] mx-4">
@@ -76,11 +78,27 @@ const Section3 = () => {
           <div className="Tabs">
             <Tab.Group>
               <Tab.List className="mb-12">
-                <Tab className="Button  bg-[#4340CA] h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-2 py-2 sm:px-6 b disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0 mr-8">
-                  New York
+                <Tab>
+                  {({ selected }) => (
+                    /* Use the `selected` state to conditionally style the selected tab. */
+                    <button className={`mr-4 ${selected ? styleActive : ''}`}>Tab 1</button>
+                  )}
+                </Tab>{' '}
+                <Tab>
+                  {({ selected }) => (
+                    /* Use the `selected` state to conditionally style the selected tab. */
+                    <button className={`mr-4 ${selected ? styleActive : ''}`}>Tab 2</button>
+                  )}
+                </Tab>{' '}
+                <Tab>
+                  {({ selected }) => (
+                    /* Use the `selected` state to conditionally style the selected tab. */
+                    <button className={`mr-4 ${selected ? styleActive : ''}`}>Tab 1</button>
+                  )}
                 </Tab>
+                {/* <Tab className={styleActive}>New York</Tab>
                 <Tab className="mr-8">Tokyo</Tab>
-                <Tab className="mr-8">Paris</Tab>
+                <Tab className="mr-8">Paris</Tab> */}
               </Tab.List>
               <Tab.Panels>
                 <Tab.Panel>
