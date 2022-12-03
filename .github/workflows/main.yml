@@ -20,8 +20,8 @@ jobs:
       - run: pnpm build:static
       
       # Deploy to s3 bucket
-      - name: S3 bucket
       - uses: aws-actions/configure-aws-credentials@v1
+      - name: S3 bucket
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -29,8 +29,8 @@ jobs:
       - run: aws s3 sync ./out s3://hostel-web
         
       # Copy files to server
-      - name: executing remote ssh commands using ssh key
       - uses: appleboy/ssh-action@master
+      - name: executing remote ssh commands using ssh key
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
