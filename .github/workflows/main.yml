@@ -10,22 +10,22 @@ jobs:
     runs-on: self-hosted
     steps:
       # Checkout and setup nodejs
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 16
-      - run: npm install -g pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build:static
+      # - uses: actions/checkout@v2
+      # - uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 16
+      # - run: npm install -g pnpm
+      # - run: pnpm install --frozen-lockfile
+      # - run: pnpm build:static
       
-      # Deploy to s3 bucket
-      - uses: aws-actions/configure-aws-credentials@v1
-        name: s3 bucket
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-south-1
-      - run: aws s3 sync ./out s3://hostel-web
+      # # Deploy to s3 bucket
+      # - uses: aws-actions/configure-aws-credentials@v1
+      #   name: s3 bucket
+      #   with:
+      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     aws-region: ap-south-1
+      # - run: aws s3 sync ./out s3://hostel-web
         
         # Copy files to server
       - uses: appleboy/ssh-action@master
@@ -41,7 +41,7 @@ jobs:
               # git clone https://github.com/admondtamang/hostel-web
               
               
-              cd ~/github_projects
+              cd ~/github_projects/hostel-web
               git pull
               npm install -g pnpm
               pnpm install --frozen-lockfile
