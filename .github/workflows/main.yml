@@ -39,6 +39,7 @@ jobs:
               mkdir ~/github_projects
               cd ~/github_projects
               git clone https://github.com/admondtamang/hostel-web
+              npm install -g pnpm
               pnpm install --frozen-lockfile
               pnpm run build
               pnpm start
