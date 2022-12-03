@@ -36,9 +36,13 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-              mkdir ~/github_projects
+              # mkdir ~/github_projects
+              # cd ~/github_projects
+              # git clone https://github.com/admondtamang/hostel-web
+              
+              
               cd ~/github_projects
-              git clone https://github.com/admondtamang/hostel-web
+              git pull
               npm install -g pnpm
               pnpm install --frozen-lockfile
               pnpm run build
