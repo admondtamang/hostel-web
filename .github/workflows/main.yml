@@ -47,7 +47,7 @@ jobs:
             cd ~/github_projects/hostel-web
             git checkout .
             git pull
-            npm install -g pnpm
+            sudo npm install -g pnpm
             pnpm install --frozen-lockfile
             pnpm run build
             pnpm start
