@@ -2,7 +2,7 @@ import React from "react";
 
 const Section5 = () => {
   return (
-    <div className="NewsLetter lg:py-14 px-4 xl:px-16">
+    <div className="NewsLetter lg:py-14 px-4 2xl:px-16">
       <div class="relative flex flex-col lg:flex-row lg:items-center">
         <div class="flex-shrink-0 mb-10 lg:mb-0 lg:mr-10 lg:w-2/5">
           <h2 class="font-semibold text-4xl">Join our newsletter 🎉</h2>

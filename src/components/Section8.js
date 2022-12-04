@@ -43,7 +43,7 @@ const Section8 = () => {
   ];
   return (
     <div>
-      <div className="SliderSection px-4 py-8 xl:px-16">
+      <div className="SliderSection px-4 py-8 2xl:px-16">
         <div className="SectionSliderNewCategories flow-root">
           <div className="Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between text-neutral-900 dark:text-neutral-50">
             <div className="max-w-2xl">

@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header>
       <div className="Header fixed top-0 w-full left-0 right-0 z-40 nc-header-bg shadow-sm dark:border-b dark:border-neutral-700">
-        <div className="nc-MainNav1 relative z-10 xl:px-16">
+        <div className="nc-MainNav1 relative z-10 2xl:px-16">
           <div className="px-4 lg:container py-4 lg:py-5 relative flex justify-between items-center mx-auto">
             <div className="hidden md:flex justify-start flex-1 items-center space-x-4 sm:space-x-10">
               <Link className="ttnc-logo inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24" href="/">
