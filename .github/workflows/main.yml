@@ -41,7 +41,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
               PATH=$PATH:/${{secrets.SSH_USER_NAME}}/.npm-global/bin
-
+              node -v
               # mkdir ~/github_projects
               # cd ~/github_projects
               # git clone https://github.com/admondtamang/hostel-web
