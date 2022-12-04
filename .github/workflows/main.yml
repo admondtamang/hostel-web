@@ -28,24 +28,37 @@ jobs:
       # - run: aws s3 sync ./out s3://hostel-web
         
         # Copy files to server
-      - uses: appleboy/ssh-action@master
-        name: executing remote ssh commands using ssh key
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-              # mkdir ~/github_projects
-              # cd ~/github_projects
-              # git clone https://github.com/admondtamang/hostel-web
-              
-              
-              cd ~/github_projects/hostel-web
-              git pull
-              npm install -g pnpm
-              pnpm install --frozen-lockfile
-              pnpm run build
-              pnpm start
-              
-              
+  deploy:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v2
+    - uses: appleboy/ssh-action@master
+      name: executing remote ssh commands using ssh key
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+            # mkdir ~/github_projects
+            # cd ~/github_projects
+            # git clone https://github.com/admondtamang/hostel-web
+            
+            cd ~/github_projects/hostel-web
+            git checkout .
+            git pull
+            npm install -g pnpm
+            pnpm install --frozen-lockfile
+            pnpm run build
+            pnpm start
+            
+
+
+            # cd ~/github_projects/hostel-web
+            # git pull
+            # npm install -g pnpm
+            # pnpm install --frozen-lockfile
+            # pnpm run build
+            # pnpm start
+            
+            
