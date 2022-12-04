@@ -42,6 +42,7 @@ jobs:
           script: |
               PATH=$PATH:/${{secrets.SSH_USER_NAME}}/.npm-global/bin
               node -v
+              nvm use 16.6.0
               # mkdir ~/github_projects
               # cd ~/github_projects
               # git clone https://github.com/admondtamang/hostel-web
