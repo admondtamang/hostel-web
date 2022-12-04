@@ -50,7 +50,7 @@ const review = [
 
 const Section6 = () => {
   return (
-    <div className="customer-info px-4">
+    <div className="customer-info px-4 xl:px-16">
       <div class="relative py-16">
         <div class="absolute inset-y-0 w-screen xl:max-w-[1340px] 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2 xl:rounded-[40px] z-0 bg-orange-50 dark:bg-black dark:bg-opacity-20 "></div>
         <div class="relative">
