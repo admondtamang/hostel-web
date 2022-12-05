@@ -2,7 +2,7 @@ import React from 'react';
 import { FaStar, FaMedal } from 'react-icons/fa';
 import Lightbox from '../lightbox';
 
-const Hero = () => {
+const HostelHero = () => {
   const images = [
     '/images/blogs/slider/1a.jpeg',
     '/images/blogs/slider/2.webp',
@@ -33,4 +33,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HostelHero;

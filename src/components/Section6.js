@@ -66,7 +66,7 @@ const Section6 = () => {
             {review.map((row, index) => (
               <div
                 key={index}
-                class="cards bg-white relative flex flex-col items-center justify-center text-center px-3 py-5 sm:px-6 sm:py-7 rounded-[24px] hover:shadow-xl hover:bg-[#F3F1F0]"
+                class="cards bg-white dark:bg-[#262626] relative flex flex-col items-center justify-center text-center px-3 py-5 sm:px-6 sm:py-7 rounded-[24px] hover:shadow-xl hover:bg-[#F3F1F0]"
                 // href="/"
               >
                 <div class="relative flex-shrink-0 inline-flex items-center justify-center text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-20 h-20 text-2xl ring-1 ring-white dark:ring-neutral-900">

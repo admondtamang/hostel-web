@@ -52,24 +52,6 @@ const Section8 = () => {
                 Descriptions for sections
               </span>
             </div>
-            {/* <div className="mt-4 flex justify-end sm:ml-2 sm:mt-0 flex-shrink-0">
-              <div className="NextPrev relative flex items-center text-neutral-900 dark:text-neutral-300 " data-id="NextPrev">
-                <button
-                  className="w-10 h-10 mr-[6px] bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-6000 dark:hover:border-neutral-500 rounded-full flex items-center justify-center hover:border-neutral-300 focus:outline-none"
-                  title="Prev"
-                  data-glide-dir="<"
-                >
-                  <i className="las la-angle-left"></i>
-                </button>
-                <button
-                  className="w-10 h-10 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-6000 dark:hover:border-neutral-500 rounded-full flex items-center justify-center hover:border-neutral-300 focus:outline-none"
-                  title="Next"
-                  data-glide-dir=">"
-                >
-                  <i className="las la-angle-right"></i>
-                </button>
-              </div>
-            </div> */}
           </div>
 
           <SwiperCarousel swiperData={swiperData} PlaceComponent />

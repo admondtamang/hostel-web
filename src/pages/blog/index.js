@@ -1,15 +1,16 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import BlogHome from '../../components/blog/BlogHome';
+import React from 'react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+import BlogHome from '../../components/blog/BlogHome'
 
-const blog = () => {
+const index = () => {
   return (
     <div>
-      <Header />
-      <BlogHome />
-      <Footer />
+        <Header />
+        <BlogHome />
+        <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default blog;
+export default index

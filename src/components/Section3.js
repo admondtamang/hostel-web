@@ -63,7 +63,7 @@ const Section3 = () => {
     'bg-[#4340CA]  disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0';
   return (
     <div>
-      <div className="SectionSliderNewCategories px-12 py-8 bg-[#F3F4F6] rounded-[45px] mx-4">
+      <div className="SectionSliderNewCategories px-12 py-8 bg-[#F3F4F6] dark:bg-[#262626] rounded-[45px] mx-4">
         <div className="SectionSliderNewCategories__PageHome_s1nc__rq_ flow-root glide--ltr glide--slider glide--swipeable">
           <div className="Section-Heading  flex flex-col sm:flex-row sm:items-end justify-between mb-12 lg:mb-16 text-neutral-900 dark:text-neutral-50">
             <div className="max-w-2xl">
@@ -110,8 +110,8 @@ const Section3 = () => {
                 <Tab.Panel>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {swiperCarousel.map((row, index) => (
-                      <Link href="/blog/blog-details" key={index}>
-                        <div className="cards rounded-[24px] shadow-sm bg-white hover:shadow-xl hover:bg-[#F3F1F0]">
+                      <Link href="/hostel/hostel-details" key={index}>
+                        <div className="cards rounded-[24px] shadow-sm bg-white dark:bg-black hover:shadow-xl hover:bg-[#F3F1F0]">
                           <Swiper
                             modules={[Pagination, EffectFade]}
                             pagination
@@ -209,7 +209,7 @@ const Section3 = () => {
             </Tab.Group>
           </div>
           <div className="Button flex justify-center mt-4">
-            <Link href="/blog">
+            <Link href="/hostel">
               <button
                 type="button"
                 className="text-white bg-[#4340CA] hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-[24px] text-sm px-5 py-2.5 text-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center"
