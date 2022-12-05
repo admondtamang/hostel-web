@@ -46,6 +46,7 @@ jobs:
           script: |
               PATH=$PATH:/${{secrets.USERNAME}}/.npm-global/bin
               node -v
+              whoami
               nvm use 16.6.0
               # mkdir ~/github_projects
               # cd ~/github_projects
