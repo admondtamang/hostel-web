@@ -8,7 +8,7 @@ module.exports = withMDX({
   // Support MDX files as pages:
   pageExtensions: ["md", "mdx", "tsx", "ts", "jsx", "js"],
   reactStrictMode: true,
-  images: {
-    unoptimized: true,
-  },
+  // images: {
+  //   unoptimized: true,
+  // },
 });
