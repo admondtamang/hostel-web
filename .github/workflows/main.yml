@@ -32,14 +32,16 @@ jobs:
     runs-on: self-hosted
     steps:
       # Checkout and setup nodejs
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
       - run: npm i -g pnpm pm2
       - run: pnpm i --frozen-lockfile
       - run: pnpm build
       - run: pm2 reload next-js
+      
+      # access ssh key 
       - uses: appleboy/ssh-action@master
         name: executing remote ssh commands using ssh key
         with:
