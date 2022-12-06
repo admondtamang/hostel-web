@@ -33,12 +33,12 @@ const BlogDetails = () => {
       <div className="pt-16">
         <div className="SectionBlogDetails px-8 py-4 mx-4 my-20">
           <div className="max-w-screen-lg mx-auto space-y-5">
-            <a
+            <Link
               className="transition-colors hover:text-white duration-300 Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-purple-800 bg-purple-100 hover:bg-purple-800"
               href="/blog-single##"
             >
               boys hostel
-            </a>
+            </Link>
 
             <h1
               className=" text-neutral-900 font-semibold text-3xl md:text-4xl md:!leading-[120%] lg:text-4xl dark:text-neutral-100 max-w-4xl "
@@ -61,9 +61,9 @@ const BlogDetails = () => {
               <div className="lex items-center flex-wrap text-neutral-700 text-left dark:text-neutral-200 text-sm leading-none flex-shrink-0 flex-row">
                 <div className="ml-3">
                   <div className="flex items-center">
-                    <a className="block font-semibold" href="/blog">
+                    <Link className="block font-semibold" href="/blog">
                       Admond tamang
-                    </a>
+                    </Link>
                   </div>
                   <div className="text-xs mt-[6px]">
                     <span className="text-neutral-700 dark:text-neutral-300">
@@ -182,7 +182,7 @@ const BlogDetails = () => {
                       WRITEN BY
                     </span>
                     <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-200">
-                      <a href="">Admond tamang</a>
+                      <Link href="">Admond tamang</Link>
                     </h2>
                     <span className="text-sm text-neutral-500 sm:text-base dark:text-neutral-300">
                       I am the writer of this blog
@@ -210,7 +210,7 @@ const BlogDetails = () => {
               </div>
               <div className="max-w-screen-md mx-auto">
                 {reviewData.map((row, index) => (
-                  <ul className="comments space-y-5 py-2">
+                  <ul key={index} className="comments space-y-5 py-2">
                     <li>
                       <div className="CommentCard flex ">
                         <div className="pt-1">
@@ -225,12 +225,12 @@ const BlogDetails = () => {
                         </div>
                         <div className="flex-grow flex flex-col p-4 ml-2 text-sm border border-neutral-200 rounded-xl sm:ml-3 sm:text-base dark:border-neutral-700">
                           <div className="relative flex items-center pr-6">
-                            <a
+                            <Link
                               className="flex-shrink-0 font-semibold text-neutral-800 dark:text-neutral-100"
                               href="/ncmaz/author/the-demo-author-slug"
                             >
                               {row.reviewerName}
-                            </a>
+                            </Link>
                             <span className="mx-2">·</span>
                             <span className="text-neutral-500 dark:text-neutral-400 text-xs line-clamp-1 sm:text-sm">
                               May 20, 2021
@@ -280,12 +280,12 @@ const BlogDetails = () => {
                             </div>
                             <div className="flex-grow flex flex-col p-4 ml-2 text-sm border border-neutral-200 rounded-xl sm:ml-3 sm:text-base dark:border-neutral-700">
                               <div className="relative flex items-center pr-6">
-                                <a
+                                <Link
                                   className="flex-shrink-0 font-semibold text-neutral-800 dark:text-neutral-100"
                                   href=""
                                 >
                                   {row.reviewerName}
-                                </a>
+                                </Link>
                                 <span className="mx-2">·</span>
                                 <span className="text-neutral-500 dark:text-neutral-400 text-xs line-clamp-1 sm:text-sm">
                                   May 20, 2021
@@ -327,7 +327,6 @@ const BlogDetails = () => {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </div>

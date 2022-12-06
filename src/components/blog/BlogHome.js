@@ -143,15 +143,18 @@ const BlogHome = () => {
             <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 md:gap-8">
               {/* card */}
               {blogData.map((row, index) => (
-                <div class=" card relative aspect-w-3 aspect-h-4 rounded-3xl overflow-hidden group shadow-md dark:bg-[#262626]">
+                <div
+                  key={index}
+                  class=" card relative aspect-w-3 aspect-h-4 rounded-3xl overflow-hidden group shadow-md dark:bg-[#262626]"
+                >
                   <Link href="/blog/blog-details">
-                  <div class="imgs">
-                    <img
-                      src={row.blogPicz}
-                      class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
-                      alt="img"
-                    />
-                  </div>
+                    <div class="imgs">
+                      <img
+                        src={row.blogPicz}
+                        class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
+                        alt="img"
+                      />
+                    </div>
                   </Link>
                   <div>
                     <div class="absolute"></div>
@@ -161,9 +164,9 @@ const BlogHome = () => {
                       {row.CategoryName}
                     </span>
                     <Link href="/blog/blog-details">
-                    <h2 class="block text-lg font-semibold text-black dark:text-white">
-                      <span class="line-clamp-2">{row.Desc}</span>
-                    </h2>
+                      <h2 class="block text-lg font-semibold text-black dark:text-white">
+                        <span class="line-clamp-2">{row.Desc}</span>
+                      </h2>
                     </Link>
                     <div class="flex">
                       <span class="block text-black hover:text-black font-medium truncate dark:text-white">
@@ -197,6 +200,7 @@ const BlogHome = () => {
               <div className="flex flex-wrap p-4 xl:p-5">
                 {tagsData.map((row, index) => (
                   <Link
+                    key={index}
                     href="/"
                     className="inline-block bg-white text-sm text-neutral-6000 dark:text-neutral-300 py-2 px-3 rounded-lg border border-neutral-100 md:py-2.5 md:px-4 dark:bg-neutral-700 dark:border-neutral-700 hover:border-neutral-200 dark:hover:border-neutral-6000 mr-2 mb-2"
                   >
@@ -221,7 +225,10 @@ const BlogHome = () => {
                 </Link>
               </div>
               {recentblogData.map((row, index) => (
-                <div className="flex flex-col divide-y divide-neutral-200 dark:divide-neutral-700">
+                <div
+                  key={index}
+                  className="flex flex-col divide-y divide-neutral-200 dark:divide-neutral-700"
+                >
                   <div className="elative flex flex-col-reverse sm:flex-row sm:justify-between sm:items-center p-4 xl:px-5 xl:py-6 hover:bg-neutral-200 dark:hover:bg-neutral-700">
                     <div className="relative space-y-2">
                       <div className="inline-flex items-center fledx-wrap text-neutral-800 dark:text-neutral-200 text-sm leading-none">
