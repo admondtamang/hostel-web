@@ -50,7 +50,7 @@ const review = [
 
 const Section6 = () => {
   return (
-    <div className="customer-info px-4">
+    <div className="customer-info px-4 2xl:px-16">
       <div class="relative py-16">
         <div class="absolute inset-y-0 w-screen xl:max-w-[1340px] 2xl:max-w-screen-2xl left-1/2 transform -translate-x-1/2 xl:rounded-[40px] z-0 bg-orange-50 dark:bg-black dark:bg-opacity-20 "></div>
         <div class="relative">
@@ -66,7 +66,7 @@ const Section6 = () => {
             {review.map((row, index) => (
               <div
                 key={index}
-                class="cards bg-white relative flex flex-col items-center justify-center text-center px-3 py-5 sm:px-6 sm:py-7 rounded-[24px] hover:shadow-xl hover:bg-[#F3F1F0]"
+                class="cards bg-white dark:bg-[#262626] relative flex flex-col items-center justify-center text-center px-3 py-5 sm:px-6 sm:py-7 rounded-[24px] hover:shadow-xl hover:bg-[#F3F1F0]"
                 // href="/"
               >
                 <div class="relative flex-shrink-0 inline-flex items-center justify-center text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-20 h-20 text-2xl ring-1 ring-white dark:ring-neutral-900">

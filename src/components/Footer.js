@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <div className="nc-Footer relative py-24 lg:py-28 border-t border-neutral-200 dark:border-neutral-700 px-4">
-      <div className="container grid grid-cols-2 gap-y-10 gap-x-5 sm:gap-x-8 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-10 mx-auto">
+      <div className="container grid grid-cols-2 gap-y-10 gap-x-5 sm:gap-x-8 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-10 mx-auto 2xl:px-16">
         <div className="grid grid-cols-4 gap-5 col-span-2 md:col-span-4 lg:md:col-span-1 lg:flex lg:flex-col">
           <div className="col-span-2 md:col-span-1">
             <Link className="ttnc-logo inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24" href="/chisfis/">

@@ -3,7 +3,7 @@ import React from "react";
 const Section2 = () => {
   return (
     <div
-      className="OurFeatures relative flex flex-col items-center lg:flex-row lg:py-14 px-4"
+      className="OurFeatures relative flex flex-col items-center lg:flex-row lg:py-14 px-4 2xl:px-16"
     >
       <div className="flex-grow">
         <div className="fimage">
