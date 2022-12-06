@@ -36,6 +36,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 16
+      - run: npm i -g pnpm pm2
+      - run: pnpm i --frozen-lockfile
+      - run: pnpm build
+      - run: pm2 reload next-js
       - uses: appleboy/ssh-action@master
         name: executing remote ssh commands using ssh key
         with:
@@ -47,26 +51,4 @@ jobs:
               PATH=$PATH:/${{secrets.USERNAME}}/.npm-global/bin
               node -v
               whoami
-              nvm use 16.6.0
-              # mkdir ~/github_projects
-              # cd ~/github_projects
-              # git clone https://github.com/admondtamang/hostel-web
-              
-              cd ~/github_projects/hostel-web
-              # git checkout .
-              git pull
-              sudo npm install -g pnpm
-              pnpm install --frozen-lockfile
-              pnpm run build
-              pnpm start
-              
-
-
-              # cd ~/github_projects/hostel-web
-              # git pull
-              # npm install -g pnpm
-              # pnpm install --frozen-lockfile
-              # pnpm run build
-              # pnpm start
-              
               
