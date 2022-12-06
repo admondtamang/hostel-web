@@ -1,11 +1,9 @@
 import React from "react";
 import {
   FaWater,
-  FaMedal,
   FaRegUser,
   FaSignal,
   FaBath,
-  MdBalcony,
   FaLaptopHouse,
 } from "react-icons/fa";
 import Lightbox from "../common/lightbox";

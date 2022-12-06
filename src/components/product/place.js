@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const Place = ({ row, index }) => {
+const Place = ({ row }) => {
   const { image, name, caption } = row;
 
   return (
@@ -10,8 +10,12 @@ const Place = ({ row, index }) => {
       </div>
       <span class="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-10 transition-opacity"></span>
       <div class="mt-4 truncate">
-        <h2 class="text-base sm:text-lg text-neutral-900 dark:text-neutral-100 font-medium truncate">{name}</h2>
-        <span class="block mt-2 text-sm text-neutral-6000 dark:text-neutral-400">{caption}</span>
+        <h2 class="text-base sm:text-lg text-neutral-900 dark:text-neutral-100 font-medium truncate">
+          {name}
+        </h2>
+        <span class="block mt-2 text-sm text-neutral-6000 dark:text-neutral-400">
+          {caption}
+        </span>
       </div>
     </div>
   );

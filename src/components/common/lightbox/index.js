@@ -1,6 +1,6 @@
-import React, { Component, useState } from 'react';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+import React, { useState } from "react";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
 
 export default function LightBox({ images }) {
   const [state, setState] = useState({
@@ -16,8 +16,12 @@ export default function LightBox({ images }) {
         {images?.map((row, index) => (
           <div
             key={index}
-            onClick={() => setState({ ...state, isOpen: true, photoIndex: index })}
-            className={`${index == 0 ? 'md:col-span-2 row-span-2 ' : ''} hover:brightness-50`}
+            onClick={() =>
+              setState({ ...state, isOpen: true, photoIndex: index })
+            }
+            className={`${
+              index == 0 ? "md:col-span-2 row-span-2 " : ""
+            } hover:brightness-50`}
           >
             <img className="rounded-[24px]" src={row} alt="img" />
           </div>
@@ -30,8 +34,15 @@ export default function LightBox({ images }) {
           nextSrc={images[(photoIndex + 1) % images.length]}
           prevSrc={images[(photoIndex + images.length - 1) % images.length]}
           onCloseRequest={() => setState({ ...state, isOpen: false })}
-          onMovePrevRequest={() => setState({ ...state, photoIndex: (photoIndex + images.length - 1) % images.length })}
-          onMoveNextRequest={() => setState({ ...state, photoIndex: (photoIndex + 1) % images.length })}
+          onMovePrevRequest={() =>
+            setState({
+              ...state,
+              photoIndex: (photoIndex + images.length - 1) % images.length,
+            })
+          }
+          onMoveNextRequest={() =>
+            setState({ ...state, photoIndex: (photoIndex + 1) % images.length })
+          }
         />
       )}
     </div>

@@ -1,86 +1,83 @@
-import React from 'react';
-import { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { EffectFade, Pagination } from 'swiper';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
-import { Tab } from '@headlessui/react';
-import { MdStar } from 'react-icons/md';
-import Link from 'next/link';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { EffectFade, Pagination } from "swiper";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+import Link from "next/link";
 
 const swiperCarousel = [
   {
     id: 1,
-    Feature: 'Single Room - 3 beds',
-    Name: 'boys hostel',
-    Location: 'kathmandu',
-    Price: '$26',
+    Feature: "Single Room - 3 beds",
+    Name: "boys hostel",
+    Location: "kathmandu",
+    Price: "$26",
     Rating: 4.9,
   },
   {
-    Feature: 'Single Room - 3 beds',
+    Feature: "Single Room - 3 beds",
     id: 1,
-    Name: 'girls hostel',
-    Location: 'New Baneshwor',
-    Price: '$36',
+    Name: "girls hostel",
+    Location: "New Baneshwor",
+    Price: "$36",
     Rating: 4.9,
   },
   {
-    Feature: 'Single Room - 3 beds',
+    Feature: "Single Room - 3 beds",
     id: 1,
-    Name: 'boys hostel',
-    Location: 'kathmandu',
-    Price: '$26',
+    Name: "boys hostel",
+    Location: "kathmandu",
+    Price: "$26",
     Rating: 4.8,
   },
   {
-    Feature: 'Single Room - 3 beds',
+    Feature: "Single Room - 3 beds",
     id: 1,
-    Name: 'boys hostel',
-    Location: 'kathmandu',
-    Price: '$26',
+    Name: "boys hostel",
+    Location: "kathmandu",
+    Price: "$26",
     Rating: 4.8,
   },
   {
-    Feature: 'Single Room - 3 beds',
+    Feature: "Single Room - 3 beds",
     id: 1,
-    Name: 'boys hostel',
-    Location: 'kathmandu',
-    Price: '$26',
+    Name: "boys hostel",
+    Location: "kathmandu",
+    Price: "$26",
     Rating: 4.8,
   },
   {
-    Feature: 'Single Room - 3 beds',
+    Feature: "Single Room - 3 beds",
     id: 1,
-    Name: 'boys hostel',
-    Location: 'kathmandu',
-    Price: '$26',
+    Name: "boys hostel",
+    Location: "kathmandu",
+    Price: "$26",
     Rating: 4.8,
   },
   {
-    Feature: 'Single Room - 3 beds',
+    Feature: "Single Room - 3 beds",
     id: 1,
-    Name: 'boys hostel',
-    Location: 'kathmandu',
-    Price: '$26',
+    Name: "boys hostel",
+    Location: "kathmandu",
+    Price: "$26",
     Rating: 4.8,
   },
   {
-    Feature: 'Single Room - 3 beds',
+    Feature: "Single Room - 3 beds",
     id: 1,
-    Name: 'boys hostel',
-    Location: 'kathmandu',
-    Price: '$26',
+    Name: "boys hostel",
+    Location: "kathmandu",
+    Price: "$26",
     Rating: 4.8,
   },
   {
-    Feature: 'Single Room - 3 beds',
+    Feature: "Single Room - 3 beds",
     id: 1,
-    Name: 'boys hostel',
-    Location: 'kathmandu',
-    Price: '$26',
+    Name: "boys hostel",
+    Location: "kathmandu",
+    Price: "$26",
     Rating: 4.8,
   },
 ];
@@ -88,13 +85,23 @@ const swiperCarousel = [
 const HostelHome = () => {
   return (
     <div className="pt-14">
-      <Swiper modules={[Pagination, EffectFade]} pagination effect speed={800} slidesPerView={1} className="mycardsswiper" loop></Swiper>
+      <Swiper
+        modules={[Pagination, EffectFade]}
+        pagination
+        effect
+        speed={800}
+        slidesPerView={1}
+        className="mycardsswiper"
+        loop
+      ></Swiper>
       <div>
         <div className="SectionSliderNewCategories px-12 py-8 mx-4 my-8">
           <div className="SectionSliderNewCategories__PageHome_s1nc__rq_ flow-root glide--ltr glide--slider glide--swipeable">
             <div className="Section-Heading  flex flex-col sm:flex-row sm:items-end justify-between mb-12 lg:mb-16 text-neutral-900 dark:text-neutral-50">
               <div className="max-w-2xl">
-                <h2 className="text-3xl md:text-4xl font-semibold">Boys Hostel</h2>
+                <h2 className="text-3xl md:text-4xl font-semibold">
+                  Boys Hostel
+                </h2>
                 <span className="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400">
                   Popular places to stay that Chisfis recommends for you
                 </span>
@@ -123,20 +130,31 @@ const HostelHome = () => {
                         loop
                       >
                         <SwiperSlide>
-                          <img className="rounded-t-[24px]" src="/images/blogs/1.jpeg"></img>
+                          <img
+                            className="rounded-t-[24px]"
+                            src="/images/blogs/1.jpeg"
+                          ></img>
                         </SwiperSlide>
 
                         <SwiperSlide>
-                          <img className="rounded-t-[24px]" src="/images/blogs/2.png"></img>
+                          <img
+                            className="rounded-t-[24px]"
+                            src="/images/blogs/2.png"
+                          ></img>
                         </SwiperSlide>
                         <SwiperSlide>
-                          <img className="rounded-t-[24px]" src="/images/blogs/3.png"></img>
+                          <img
+                            className="rounded-t-[24px]"
+                            src="/images/blogs/3.png"
+                          ></img>
                         </SwiperSlide>
                       </Swiper>
                       <div className="lower-content">
                         <div className="p-4 space-y-4">
                           <div className="space-y-2">
-                            <span className="text-sm text-neutral-500 dark:text-neutral-400">{row.Feature}</span>
+                            <span className="text-sm text-neutral-500 dark:text-neutral-400">
+                              {row.Feature}
+                            </span>
                             <div className="flex items-center space-x-2">
                               <span className="nc-Badge inline-flex px-2.5 py-1 rounded-full font-medium text-xs text-green-800 bg-green-100">
                                 ADS
@@ -173,7 +191,9 @@ const HostelHome = () => {
                           <div className="flex justify-between items-center">
                             <span className="text-base font-semibold">
                               {row.Price}
-                              <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">/night</span>
+                              <span className="text-sm text-neutral-500 dark:text-neutral-400 font-normal">
+                                /night
+                              </span>
                             </span>
                             <div className="flex items-center space-x-1 text-sm">
                               <div className="pb-[2px]">
@@ -192,7 +212,9 @@ const HostelHome = () => {
                                 </svg>
                               </div>
                               <span className="font-medium ">{row.Rating}</span>
-                              <span className="text-neutral-500 dark:text-neutral-400">(28)</span>
+                              <span className="text-neutral-500 dark:text-neutral-400">
+                                (28)
+                              </span>
                             </div>
                           </div>
                         </div>

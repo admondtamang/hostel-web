@@ -1,11 +1,7 @@
-import { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Navigation, EffectFade } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import SwiperCarousel from "./common/SwiperCarousel";
-import Place from "./product/place";
 
 const Section8 = () => {
   const swiperData = [

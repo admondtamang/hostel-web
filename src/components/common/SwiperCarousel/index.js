@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Navigation, EffectFade } from "swiper";
+import { EffectFade } from "swiper";
 import Place from "../../product/place";
 
 const SwiperButtons = () => {

@@ -1,7 +1,4 @@
-import { useRef } from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
-import { Navigation, EffectFade } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import SwiperCarousel from "./common/SwiperCarousel";
