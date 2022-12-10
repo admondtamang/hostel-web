@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
 import "swiper/css";
 import { EffectFade } from "swiper";
 import Place from "../../product/place";
+import Image from "../Image";
 
 const SwiperButtons = () => {
   const swiper = useSwiper();
@@ -106,7 +107,7 @@ export default function SwiperCarousel({ swiperData, PlaceComponent }) {
               ) : (
                 <>
                   <div className="w-full rounded-2xl flex-shrink-0 aspect-w-5 aspect-h-4 relative ">
-                    <img
+                    <Image
                       src={row.image}
                       class="object-cover w-full h-full rounded-2xl"
                       alt="imgs"

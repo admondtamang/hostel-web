@@ -5,7 +5,7 @@ import Image from "./common/Image";
 const Hero = () => {
   return (
     <div>
-      <div class="SectionHero flex flex-col-reverse lg:flex-col relative pt-10 lg:pt-36 lg:pb-16 2xl:px-16">
+      <div class="SectionHero flex flex-col-reverse lg:flex-col relative pt-10  sm:mt-24 md:mt-0  lg:pt-36 lg:pb-16 2xl:px-16">
         <div class="flex flex-col lg:flex-row lg:items-center px-4">
           <div class="flex-shrink-0 lg:w-1/2 flex flex-col items-start space-y-8 sm:space-y-10 pb-14 lg:pb-64 xl:pr-14 lg:mr-10 xl:mr-0">
             <h2 class="font-medium text-4xl md:text-5xl xl:text-7xl !leading-[114%] ">
@@ -25,6 +25,7 @@ const Hero = () => {
               src="/images/hero-right.png"
               alt="hero"
               width="100"
+              unoptimized
             />
           </div>
         </div>
