@@ -2,31 +2,48 @@ import { VscSearch } from "react-icons/vsc";
 import Link from "next/link";
 import ToggleDarkMode from "./toggleDarkMode";
 import { useRouter } from "next/router";
+import MaterialButton from "./common/button/material";
+import { motion, useScroll, useSpring } from "framer-motion";
+import Svg from "./common/svg";
 
+const navData = [
+  {
+    name: "home",
+    route: "/",
+  },
+  {
+    name: "contact",
+    route: "/contact",
+  },
+  {
+    name: "about",
+    route: "/about",
+  },
+  {
+    name: "blogs",
+    route: "/blog",
+  },
+];
 const Header = () => {
   const router = useRouter();
-  const navData = [
-    {
-      name: "home",
-      route: "/",
-    },
-    {
-      name: "contact",
-      route: "/contact",
-    },
-    {
-      name: "about",
-      route: "/about",
-    },
-    {
-      name: "blogs",
-      route: "/blog",
-    },
-  ];
 
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+  console.log(scaleX);
   return (
     <header>
-      <div className="fixed top-0 w-full left-0 right-0 z-40 nc-header-bg shadow-sm dark:border-b dark:border-neutral-900">
+      <motion.div className="progress-bar" style={{ scaleX }} />
+
+      <motion.div
+        initial={{ opacity: 0, y: -180 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeInOut", duration: 0.6 }}
+        className="fixed top-0 w-full left-0 right-0 z-40 nc-header-bg shadow-sm dark:border-b dark:border-neutral-900"
+      >
         <div className="nc-MainNav1 relative z-10 2xl:px-16">
           <div className="px-4 lg:container py-4 lg:py-5 relative flex justify-between items-center mx-auto">
             <div className="hidden md:flex justify-start flex-1 items-center space-x-4 sm:space-x-10">
@@ -130,12 +147,20 @@ const Header = () => {
             <div className="hidden md:flex flex-shrink-0 items-center justify-end flex-1 lg:flex-none text-neutral-700 dark:text-neutral-100">
               <div className="hidden xl:flex items-center space-x-0.5">
                 <ToggleDarkMode />
-
-                <button className="text-2xl md:text-2xl w-12 h-12 rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none flex items-center justify-center ">
-                  <span className="sr-only">search</span>
-                  <VscSearch />
-                </button>
-
+                <MaterialButton>
+                  <Svg>
+                    <motion.path
+                      initial={false}
+                      whileHover="hover"
+                      variants={{
+                        hover: { scale: 1.2, strokeWidth: 2 },
+                      }}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                    />
+                  </Svg>
+                </MaterialButton>
                 <div className="px-1"></div>
                 <Link
                   className="nc-Button relative bg-[#4340CA] h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  b disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0 "
@@ -148,7 +173,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </header>
   );
 };

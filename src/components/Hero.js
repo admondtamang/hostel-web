@@ -1,26 +1,69 @@
 import React from "react";
 import Link from "next/link";
 import Image from "./common/Image";
+import { motion, useMotionValue } from "framer-motion";
 
 const Hero = () => {
+  const container_stagger = {
+    show: {
+      transition: {
+        delayChildren: 0.4,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+  const content_variants = {
+    hidden: {
+      // initial
+      y: 200,
+      opacity: 0,
+    },
+    show: {
+      //animate
+      y: 0,
+      opacity: 1,
+      transition: "easeIn",
+    },
+  };
+  const MotionImage = motion(Image);
+
   return (
     <div>
       <div class=" flex flex-col-reverse lg:flex-col relative pt-10  sm:mt-24 md:mt-0  lg:pt-36 lg:pb-16 2xl:px-16">
-        <div class="flex flex-col lg:flex-row lg:items-center px-4">
-          <div class="flex-shrink-0 lg:w-1/2 flex flex-col items-start space-y-8 sm:space-y-10 pb-14 lg:pb-64 xl:pr-14 lg:mr-10 xl:mr-0">
-            <h2 class="font-medium text-4xl md:text-5xl xl:text-7xl !leading-[114%] ">
+        <motion.div
+          variants={container_stagger}
+          class="flex flex-col lg:flex-row lg:items-center px-4"
+        >
+          <motion.div
+            variants={container_stagger}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            class="flex-shrink-0 lg:w-1/2 flex flex-col items-start space-y-8 sm:space-y-10 pb-14 lg:pb-64 xl:pr-14 lg:mr-10 xl:mr-0"
+          >
+            <motion.h2
+              variants={content_variants}
+              class="font-medium text-4xl md:text-5xl xl:text-7xl !leading-[114%] "
+            >
               Hotel, car &amp; experiences
-            </h2>
-            <span class="text-base md:text-lg text-neutral-500 dark:text-neutral-400">
+            </motion.h2>
+            <motion.span
+              variants={content_variants}
+              class="text-base md:text-lg text-neutral-500 dark:text-neutral-400"
+            >
               Accompanying us, you have a trip full of experiences. With
               Chisfis, booking accommodation, resort villas, hotels
-            </span>
-            <button class="button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0  bg-[#4340ca]">
+            </motion.span>
+            <motion.button
+              variants={content_variants}
+              class="button relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0  bg-[#4340ca]"
+            >
               Start your search
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
           <div class="flex-grow">
-            <Image
+            <MotionImage
+              variants={content_variants}
               class="w-full"
               src="/images/hero-right.png"
               alt="hero"
@@ -28,8 +71,11 @@ const Hero = () => {
               unoptimized
             />
           </div>
-        </div>
-        <div class="hidden lg:block z-10 mb-12 lg:mb-0 lg:-mt-40 w-full">
+        </motion.div>
+        <motion.div
+          variants={content_variants}
+          class="hidden lg:block z-10 mb-12 lg:mb-0 lg:-mt-40 w-full"
+        >
           <div class="HeroSearchForm w-full max-w-6xl py-5 lg:py-0">
             <ul class="ml-2 sm:ml-6 md:ml-12 flex space-x-5 sm:space-x-8 lg:space-x-11 overflow-x-auto hiddenScrollbar">
               <li class="flex-shrink-0 flex items-center cursor-pointer text-sm lg:text-base font-medium  ">
@@ -201,7 +247,7 @@ const Hero = () => {
               </div>
             </form>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

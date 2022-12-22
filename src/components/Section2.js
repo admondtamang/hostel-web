@@ -1,8 +1,13 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-const Section2 = () => {
+const Section2 = (props) => {
   return (
-    <div
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={props.variants}
       className="OurFeatures relative flex flex-col items-center lg:flex-row lg:py-14 px-4 2xl:px-16"
     >
       <div className="flex-grow">
@@ -48,7 +53,9 @@ const Section2 = () => {
             <span className="inline-flex px-2.5 py-1 rounded-full font-medium text-xs text-red-800 bg-red-100 ">
               Secure
             </span>
-            <span className="block text-xl font-semibold">Secure and simple</span>
+            <span className="block text-xl font-semibold">
+              Secure and simple
+            </span>
             <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
               A Holiday Lettings listing gives you a secure and easy way to take
               bookings and payments online
@@ -56,7 +63,7 @@ const Section2 = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -2,8 +2,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import SwiperCarousel from "./common/SwiperCarousel";
+import { motion } from "framer-motion";
 
-const Section1 = () => {
+const Section1 = (props) => {
   const swiperData = [
     {
       image:
@@ -44,23 +45,27 @@ const Section1 = () => {
   ];
 
   return (
-    <div>
-      <div className="SliderSection px-4 2xl:px-16">
-        <div className="SectionSliderNewCategories flow-root">
-          <div className="Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between text-neutral-900 dark:text-neutral-50">
-            <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-semibold">
-                Heading of sections
-              </h2>
-              <span className="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400">
-                Descriptions for sections
-              </span>
-            </div>
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.4 }}
+      variants={props.variants}
+      className="SliderSection px-4 2xl:px-16"
+    >
+      <div className="SectionSliderNewCategories flow-root">
+        <div className="Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between text-neutral-900 dark:text-neutral-50">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-semibold">
+              Heading of sections
+            </h2>
+            <span className="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400">
+              Descriptions for sections
+            </span>
           </div>
-          <SwiperCarousel swiperData={swiperData} />
         </div>
+        <SwiperCarousel swiperData={swiperData} />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

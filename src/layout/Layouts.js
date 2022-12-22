@@ -8,6 +8,7 @@ const Layouts = ({ children }) => {
       <Head>
         <title>Hotel Website</title>
       </Head>
+
       <Header />
       <main className="container relative space-y-24 mb-24 lg:space-y-28 lg:mb-28 mx-auto ">
         {children}
