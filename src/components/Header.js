@@ -8,20 +8,30 @@ import Svg from "./common/svg";
 
 const navData = [
   {
-    name: "home",
+    name: "Home",
     route: "/",
   },
   {
-    name: "contact",
+    name: "Contact",
     route: "/contact",
   },
   {
-    name: "about",
+    name: "About",
     route: "/about",
   },
   {
-    name: "blogs",
+    name: "Blogs",
     route: "/blog",
+    children: [
+      {
+        name: "Trending",
+        route: "/blog/trending",
+      },
+      {
+        name: "Latest",
+        route: "/blog/latest",
+      },
+    ],
   },
 ];
 const Header = () => {
@@ -73,38 +83,39 @@ const Header = () => {
                       href={row.route}
                     >
                       {row.name}
+                      {Array.isArray(row.children) &&
+                      row.children.length > 0 ? (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          aria-hidden="true"
+                          className="ml-1 -mr-1 h-4 w-4 text-neutral-400"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      ) : null}
                     </Link>
+                    {Array.isArray(row.children) &&
+                      row.children.map((ele, index) => (
+                        <div
+                          key={index}
+                          className="sub-menu nc-will-change-transform absolute transform z-10 w-56 pt-3 left-0 transition ease-in duration-150 opacity-0 translate-y-1"
+                          id="headlessui-popover-panel-:rd:"
+                          tabindex="-1"
+                        >
+                          <Link href={ele.route}>{ele.name}</Link>
+                        </div>
+                      ))}
                   </li>
                 ))}
-
-                <li className="menu-item menu-dropdown relative ">
-                  <Link
-                    className="inline-flex items-center text-sm xl:text-base  py-2 px-4 xl:px-5 rounded-full hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
-                    href="/blog"
-                  >
-                    Blog
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                      className="ml-1 -mr-1 h-4 w-4 text-neutral-400"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </Link>
-                  <div
-                    className="sub-menu nc-will-change-transform absolute transform z-10 w-56 pt-3 left-0 transition ease-in duration-150 opacity-0 translate-y-1"
-                    id="headlessui-popover-panel-:rd:"
-                    tabindex="-1"
-                  ></div>
-                </li>
               </ul>
             </div>
+
             <div className="lg:hidden flex-[3] max-w-lg !mx-auto md:px-3">
               <div className="HeroSearchForm2Mobile">
                 <button className="relative flex items-center w-full border border-neutral-200 dark:border-neutral-6000 px-4 py-2 pr-11 rounded-full shadow-lg">
