@@ -1,59 +1,68 @@
 import { VscSearch } from "react-icons/vsc";
 import Link from "next/link";
 import ToggleDarkMode from "./toggleDarkMode";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
+  const navData = [
+    {
+      name: "home",
+      route: "/",
+    },
+    {
+      name: "contact",
+      route: "/contact",
+    },
+    {
+      name: "about",
+      route: "/about",
+    },
+    {
+      name: "blogs",
+      route: "/blog",
+    },
+  ];
+
   return (
     <header>
-      <div className="Header fixed top-0 w-full left-0 right-0 z-40 nc-header-bg shadow-sm dark:border-b dark:border-neutral-900">
+      <div className="fixed top-0 w-full left-0 right-0 z-40 nc-header-bg shadow-sm dark:border-b dark:border-neutral-900">
         <div className="nc-MainNav1 relative z-10 2xl:px-16">
           <div className="px-4 lg:container py-4 lg:py-5 relative flex justify-between items-center mx-auto">
             <div className="hidden md:flex justify-start flex-1 items-center space-x-4 sm:space-x-10">
               <Link
-                className="ttnc-logo inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24"
+                className={`ttnc-logo inline-block focus:outline-none focus:ring-0 w-24 `}
                 href="/"
               >
                 <b>LeetTel</b>
               </Link>
 
               <ul className="nc-Navigation hidden lg:flex lg:flex-wrap lg:items-center lg:space-x-1 relative">
-                <li className="menu-item menu-dropdown relative menuIsNew_lv1">
-                  <Link
-                    aria-current="page"
-                    className="inline-flex items-center text-sm xl:text-base  py-2 px-4 xl:px-5 rounded-full hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200 !font-semibold !text-neutral-900 bg-neutral-100 dark:bg-neutral-800 dark:!text-neutral-100"
-                    rel="noopener noreferrer"
-                    id="headlessui-popover-button-:r3:"
-                    aria-expanded="false"
-                    href="/"
+                {navData.map((row, index) => (
+                  <li
+                    key={index}
+                    className="menu-item menu-dropdown relative menuIsNew_lv1"
                   >
-                    Home
-                  </Link>
-                </li>
-                <li className="menu-item menu-megamenu menu-megamenu--large">
-                  <Link
-                    className="inline-flex items-center text-sm xl:text-base font-normal text-neutral-700 dark:text-neutral-300 py-2 px-4 xl:px-5 rounded-full hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
-                    rel="noopener noreferrer"
-                    id="headlessui-popover-button-:r6:"
-                    aria-expanded="false"
-                    href="/"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li className="menu-item menu-dropdown relative menuIsNew_lv1">
-                  <Link
-                    className="inline-flex items-center text-sm xl:text-base font-normal text-neutral-700 dark:text-neutral-300 py-2 px-4 xl:px-5 rounded-full hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
-                    rel="noopener noreferrer"
-                    id="headlessui-popover-button-:r9:"
-                    aria-expanded="false"
-                    href="/"
-                  >
-                    Contact US
-                  </Link>
-                </li>
+                    <Link
+                      aria-current="page"
+                      className={`inline-flex items-center text-sm xl:text-base  py-2 px-4 xl:px-5 rounded-full hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200 ${
+                        router.asPath == row.route
+                          ? "!font-semibold  bg-neutral-100 dark:bg-neutral-800"
+                          : ""
+                      }`}
+                      rel="noopener noreferrer"
+                      id="headlessui-popover-button-:r3:"
+                      aria-expanded="false"
+                      href={row.route}
+                    >
+                      {row.name}
+                    </Link>
+                  </li>
+                ))}
+
                 <li className="menu-item menu-dropdown relative ">
                   <Link
-                    className="inline-flex items-center text-sm xl:text-base font-normal text-neutral-700 dark:text-neutral-300 py-2 px-4 xl:px-5 rounded-full hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
+                    className="inline-flex items-center text-sm xl:text-base  py-2 px-4 xl:px-5 rounded-full hover:text-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
                     href="/blog"
                   >
                     Blog
@@ -135,45 +144,6 @@ const Header = () => {
                 >
                   Sign up
                 </Link>
-              </div>
-              <div className="flex xl:hidden items-center">
-                <button className="text-2xl md:text-3xl w-12 h-12 rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none flex items-center justify-center">
-                  <span className="sr-only">Enable dark mode</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                    className="w-7 h-7"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                    ></path>
-                  </svg>
-                </button>
-                <div className="px-0.5"></div>
-                <button className="text-2xl md:text-3xl w-12 h-12 rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none flex items-center justify-center ">
-                  <span className="sr-only">Enable dark mode</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                    className="w-7 h-7"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                    ></path>
-                  </svg>
-                </button>
               </div>
             </div>
           </div>
