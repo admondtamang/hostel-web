@@ -1,14 +1,11 @@
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import HostelHome from '../../components/hostel/HostelHome';
+import HostelHome from "../../components/hostel/HostelHome";
+import Layouts from "../../layout/Layouts";
 
 const hostel = () => {
   return (
-    <div>
-      <Header />
+    <Layouts>
       <HostelHome />
-      <Footer />
-    </div>
+    </Layouts>
   );
 };
 

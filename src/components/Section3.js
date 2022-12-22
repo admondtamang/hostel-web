@@ -90,7 +90,7 @@ const Section3 = () => {
                       styleButton,
                       selected
                         ? styleActive
-                        : "text-neutral-800 hover:bg-white/[0.12] hover:text-white"
+                        : "text-neutral-800 dark:text-white hover:bg-white/[0.12] hover:text-white"
                     )
                   }
                 >
@@ -102,7 +102,7 @@ const Section3 = () => {
                       styleButton,
                       selected
                         ? styleActive
-                        : "text-neutral-800 hover:bg-white/[0.12] hover:text-white"
+                        : "text-neutral-800 dark:text-white hover:bg-white/[0.12] hover:text-white"
                     )
                   }
                 >
@@ -114,7 +114,7 @@ const Section3 = () => {
                       styleButton,
                       selected
                         ? styleActive
-                        : "text-neutral-800 hover:bg-white/[0.12] hover:text-white"
+                        : "text-neutral-800 dark:text-white hover:bg-white/[0.12] hover:text-white"
                     )
                   }
                 >
