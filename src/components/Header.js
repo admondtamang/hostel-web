@@ -1,5 +1,6 @@
-import { VscSearch } from 'react-icons/vsc';
-import Link from 'next/link';
+import { VscSearch } from "react-icons/vsc";
+import Link from "next/link";
+import ToggleDarkMode from "./toggleDarkMode";
 
 const Header = () => {
   return (
@@ -8,7 +9,10 @@ const Header = () => {
         <div className="nc-MainNav1 relative z-10 2xl:px-16">
           <div className="px-4 lg:container py-4 lg:py-5 relative flex justify-between items-center mx-auto">
             <div className="hidden md:flex justify-start flex-1 items-center space-x-4 sm:space-x-10">
-              <Link className="ttnc-logo inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24" href="/">
+              <Link
+                className="ttnc-logo inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24"
+                href="/"
+              >
                 <b>LeetTel</b>
               </Link>
 
@@ -116,24 +120,8 @@ const Header = () => {
             </div>
             <div className="hidden md:flex flex-shrink-0 items-center justify-end flex-1 lg:flex-none text-neutral-700 dark:text-neutral-100">
               <div className="hidden xl:flex items-center space-x-0.5">
-                <button className="text-2xl md:text-3xl w-12 h-12 rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none flex items-center justify-center ">
-                  <span className="sr-only">Enable dark mode</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                    className="w-7 h-7"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                    ></path>
-                  </svg>
-                </button>
+                <ToggleDarkMode />
+
                 <button className="text-2xl md:text-2xl w-12 h-12 rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none flex items-center justify-center ">
                   <span className="sr-only">search</span>
                   <VscSearch />
