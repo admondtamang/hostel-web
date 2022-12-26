@@ -16,7 +16,7 @@ const blogData = [
     CategoryName: "Annapurna Hostel",
     Location: "pokhara",
     PublisherName: "Admond Tamang",
-    blogPicz: "images/hostel2.jpg",
+    blogPicz: "images/hostel.jpg",
   },
   {
     id: 3,

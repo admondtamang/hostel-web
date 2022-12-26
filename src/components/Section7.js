@@ -1,51 +1,51 @@
-import React from 'react';
-import Hostel from './Hostel';
+import React from "react";
+import Hostel from "./Hostel";
 
 const hostel = [
   {
     id: 1,
-    Name: 'Flock Hostel',
-    Location: 'Kathmandu',
+    Name: "Flock Hostel",
+    Location: "Kathmandu",
     Rating: 4.9,
-    Photo: 'images/hostel.jpg',
+    Photo: "images/hostel.jpg",
   },
 
   {
     id: 2,
-    Name: 'Holiday Hostel',
-    Location: 'Kathmandu',
+    Name: "Holiday Hostel",
+    Location: "Kathmandu",
     Rating: 4.9,
-    Photo: 'images/hostel2.jpg',
+    Photo: "images/hostel.jpg",
   },
 
   {
     id: 3,
-    Name: 'Flock Hostel',
-    Location: 'Kathmandu',
+    Name: "Flock Hostel",
+    Location: "Kathmandu",
     Rating: 4.9,
-    Photo: 'images/hostel.jpg',
+    Photo: "images/hostel.jpg",
   },
 
   {
     id: 4,
-    Name: 'Flock Hostel',
-    Location: 'Kathmandu',
+    Name: "Flock Hostel",
+    Location: "Kathmandu",
     Rating: 4.9,
-    Photo: 'images/hostel.jpg',
+    Photo: "images/hostel.jpg",
   },
   {
     id: 4,
-    Name: 'Flock Hostel',
-    Location: 'Kathmandu',
+    Name: "Flock Hostel",
+    Location: "Kathmandu",
     Rating: 4.9,
-    Photo: 'images/hostel.jpg',
+    Photo: "images/hostel.jpg",
   },
   {
     id: 4,
-    Name: 'Flock Hostel',
-    Location: 'Kathmandu',
+    Name: "Flock Hostel",
+    Location: "Kathmandu",
     Rating: 4.9,
-    Photo: 'images/hostel.jpg',
+    Photo: "images/hostel.jpg",
   },
 ];
 
@@ -57,7 +57,9 @@ const Section7 = () => {
         <div class="relative">
           <div class="relative flex flex-col sm:flex-row sm:items-end justify-between mb-12 lg:mb-16 text-neutral-900 dark:text-neutral-50">
             <div class="text-center w-full max-w-2xl mx-auto">
-              <h2 class="text-3xl md:text-4xl font-semibold">Explore Nearby Hostels</h2>
+              <h2 class="text-3xl md:text-4xl font-semibold">
+                Explore Nearby Hostels
+              </h2>
               <span class="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400">
                 Discover great places near where you live
               </span>
