@@ -5,7 +5,7 @@ import { motion, useMotionValue } from "framer-motion";
 
 const Hero = () => {
   const container_stagger = {
-    show: {
+    animate: {
       transition: {
         delayChildren: 0.4,
         staggerChildren: 0.1,
@@ -13,16 +13,14 @@ const Hero = () => {
     },
   };
   const content_variants = {
-    hidden: {
-      // initial
+    initial: {
       y: 200,
       opacity: 0,
     },
-    show: {
-      //animate
+    animate: {
       y: 0,
       opacity: 1,
-      transition: "easeIn",
+      ease: [0.5, 0.71, 1, 1.5],
     },
   };
   const MotionImage = motion(Image);
@@ -30,14 +28,11 @@ const Hero = () => {
   return (
     <div>
       <div class=" flex flex-col-reverse lg:flex-col relative pt-10  sm:mt-24 md:mt-0  lg:pt-36 lg:pb-16 2xl:px-16">
-        <motion.div
-          variants={container_stagger}
-          class="flex flex-col lg:flex-row lg:items-center px-4"
-        >
+        <div class="flex flex-col lg:flex-row lg:items-center px-4">
           <motion.div
             variants={container_stagger}
-            initial="hidden"
-            animate="show"
+            initial="initial"
+            animate="animate"
             exit="exit"
             class="flex-shrink-0 lg:w-1/2 flex flex-col items-start space-y-8 sm:space-y-10 pb-14 lg:pb-64 xl:pr-14 lg:mr-10 xl:mr-0"
           >
@@ -71,7 +66,7 @@ const Hero = () => {
               unoptimized
             />
           </div>
-        </motion.div>
+        </div>
         <motion.div
           variants={content_variants}
           class="hidden lg:block z-10 mb-12 lg:mb-0 lg:-mt-40 w-full"

@@ -1,15 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { cardVariants } from "./common/animationData";
 
 const Section2 = (props) => {
   return (
-    <motion.div
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.2 }}
-      variants={props.variants}
-      className="OurFeatures relative flex flex-col items-center lg:flex-row lg:py-14 px-4 2xl:px-16"
-    >
+    <div className="OurFeatures relative flex flex-col items-center lg:flex-row lg:py-14 px-4 2xl:px-16">
       <div className="flex-grow">
         <div className="fimage">
           <img
@@ -21,11 +16,20 @@ const Section2 = (props) => {
       </div>
       <div className="max-w-2xl flex-shrink-0 mt-10 lg:mt-0 lg:w-2/5 lg:pl-16">
         <span className="uppercase text-sm text-gray-400 tracking-widest">
-          BENnefits
+          Benefits
         </span>
         <h2 className="font-semibold text-4xl mt-5">Happening cities </h2>
-        <ul className="space-y-10 mt-16">
-          <li className="space-y-4">
+        <motion.ul
+          className="space-y-10 mt-16"
+          transition={{
+            delayChildren: 0.2,
+            staggerChildren: 0.1,
+          }}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.4 }}
+        >
+          <motion.li variants={cardVariants} className="space-y-4">
             <span className="inline-flex px-2.5 py-1 rounded-full font-medium text-xs  text-blue-800 bg-blue-100  ">
               Advertising
             </span>
@@ -36,8 +40,8 @@ const Section2 = (props) => {
               With a free listing, you can advertise your rental with no upfront
               costs
             </span>
-          </li>
-          <li className="space-y-4">
+          </motion.li>
+          <motion.li variants={cardVariants} className="space-y-4">
             <span className="inline-flex px-2.5 py-1 rounded-full font-medium text-xs  text-green-800 bg-green-100  ">
               Exposure{" "}
             </span>
@@ -48,8 +52,8 @@ const Section2 = (props) => {
               Millions of people are searching for unique places to stay around
               the world
             </span>
-          </li>
-          <li className="space-y-4">
+          </motion.li>
+          <motion.li variants={cardVariants} className="space-y-4">
             <span className="inline-flex px-2.5 py-1 rounded-full font-medium text-xs text-red-800 bg-red-100 ">
               Secure
             </span>
@@ -60,10 +64,10 @@ const Section2 = (props) => {
               A Holiday Lettings listing gives you a secure and easy way to take
               bookings and payments online
             </span>
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

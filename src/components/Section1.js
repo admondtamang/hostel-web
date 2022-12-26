@@ -2,7 +2,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import SwiperCarousel from "./common/SwiperCarousel";
-import { motion } from "framer-motion";
 
 const Section1 = (props) => {
   const swiperData = [
@@ -45,13 +44,7 @@ const Section1 = (props) => {
   ];
 
   return (
-    <motion.div
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.4 }}
-      variants={props.variants}
-      className="SliderSection px-4 2xl:px-16"
-    >
+    <div className="SliderSection px-4 2xl:px-16">
       <div className="SectionSliderNewCategories flow-root">
         <div className="Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between text-neutral-900 dark:text-neutral-50">
           <div className="max-w-2xl">
@@ -65,7 +58,7 @@ const Section1 = (props) => {
         </div>
         <SwiperCarousel swiperData={swiperData} />
       </div>
-    </motion.div>
+    </div>
   );
 };
 

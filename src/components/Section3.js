@@ -7,6 +7,7 @@ import "swiper/css/effect-fade";
 import { Tab } from "@headlessui/react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Typography from "./common/typography";
 
 const swiperCarousel = [
   {
@@ -69,14 +70,11 @@ const Section3 = (props) => {
     >
       <div className="SectionSliderNewCategories__PageHome_s1nc__rq_ flow-root glide--ltr glide--slider glide--swipeable">
         <div className="Section-Heading  flex flex-col sm:flex-row sm:items-end justify-between mb-12 lg:mb-16 text-neutral-900 dark:text-neutral-50">
-          <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-semibold">
-              Featured places to stay
-            </h2>
-            <span className="mt-2 md:mt-3 font-normal block text-base sm:text-xl text-neutral-500 dark:text-neutral-400">
-              Popular places to stay that Chisfis recommends for you
-            </span>
-          </div>
+          <Typography
+            title="Featured places to stay"
+            description="Popular places to stay that Chisfis recommends for you"
+          />
+
           <div className="mt-4 flex justify-end sm:ml-2 sm:mt-0 flex-shrink-0">
             <div
               className="NextPrev  flex items-center text-neutral-900 dark:text-neutral-300 "
