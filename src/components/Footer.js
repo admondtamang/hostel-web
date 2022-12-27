@@ -1,14 +1,27 @@
-import { FaFacebookSquare, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
-import Link from 'next/link';
+import {
+  FaFacebookSquare,
+  FaTwitter,
+  FaYoutube,
+  FaInstagram,
+} from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="nc-Footer relative py-24 lg:py-28 border-t border-neutral-200 dark:border-neutral-700 px-4">
+    <div className="hidden lg:block nc-Footer relative py-24 lg:py-28 border-t border-neutral-200 dark:border-neutral-700 px-4">
       <div className="container grid grid-cols-2 gap-y-10 gap-x-5 sm:gap-x-8 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-10 mx-auto 2xl:px-16">
         <div className="grid grid-cols-4 gap-5 col-span-2 md:col-span-4 lg:md:col-span-1 lg:flex lg:flex-col">
           <div className="col-span-2 md:col-span-1">
-            <Link className="ttnc-logo inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24" href="/chisfis/">
-              <svg className="w-full hidden dark:block" viewBox="0 0 65 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <Link
+              className="ttnc-logo inline-block text-primary-6000 focus:outline-none focus:ring-0 w-24"
+              href="/chisfis/"
+            >
+              <svg
+                className="w-full hidden dark:block"
+                viewBox="0 0 65 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M24.4444 14.0325C24.4444 21.4807 12.9444 29.3945 12.9444 29.3945C12.9444 29.3945 1.44444 21.4807 1.44444 14.0325C1.44444 7.51522 6.84722 2.39453 12.9444 2.39453C19.0417 2.39453 24.4444 7.51522 24.4444 14.0325Z"
                   fill="currentColor"
@@ -26,7 +39,12 @@ const Footer = () => {
                   fill="white"
                 ></path>
               </svg>
-              <svg className="w-full block dark:hidden" viewBox="0 0 65 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                className="w-full block dark:hidden"
+                viewBox="0 0 65 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M24.4444 14.0325C24.4444 21.4807 12.9444 29.3945 12.9444 29.3945C12.9444 29.3945 1.44444 21.4807 1.44444 14.0325C1.44444 7.51522 6.84722 2.39453 12.9444 2.39453C19.0417 2.39453 24.4444 7.51522 24.4444 14.0325Z"
                   fill="currentColor"
@@ -83,120 +101,188 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-sm">
-          <h2 className="font-semibold text-neutral-700 dark:text-neutral-200">Getting started</h2>
+          <h2 className="font-semibold text-neutral-700 dark:text-neutral-200">
+            Getting started
+          </h2>
           <ul className="mt-5 space-y-4">
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Installation
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Release Notes
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Upgrade Guide
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Browser Support
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Editor Support
               </Link>
             </li>
           </ul>
         </div>
         <div className="text-sm">
-          <h2 className="font-semibold text-neutral-700 dark:text-neutral-200">Explore</h2>
+          <h2 className="font-semibold text-neutral-700 dark:text-neutral-200">
+            Explore
+          </h2>
           <ul className="mt-5 space-y-4">
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Design features
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Prototyping
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Design systems
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Pricing
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Security
               </Link>
             </li>
           </ul>
         </div>
         <div className="text-sm">
-          <h2 className="font-semibold text-neutral-700 dark:text-neutral-200">Resources</h2>
+          <h2 className="font-semibold text-neutral-700 dark:text-neutral-200">
+            Resources
+          </h2>
           <ul className="mt-5 space-y-4">
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Best practices
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Support
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Developers
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Learn design
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Releases
               </Link>
             </li>
           </ul>
         </div>
         <div className="text-sm">
-          <h2 className="font-semibold text-neutral-700 dark:text-neutral-200">Community</h2>
+          <h2 className="font-semibold text-neutral-700 dark:text-neutral-200">
+            Community
+          </h2>
           <ul className="mt-5 space-y-4">
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Discussion Forums
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Code of Conduct
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Community Resources
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Contributing
               </Link>
             </li>
             <li>
-              <Link className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white" href="#">
+              <Link
+                className="text-neutral-6000 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+                href="#"
+              >
                 Concurrent Mode
               </Link>
             </li>

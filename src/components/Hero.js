@@ -27,7 +27,7 @@ const Hero = () => {
 
   return (
     <div>
-      <div class=" flex flex-col-reverse lg:flex-col relative pt-10  sm:mt-24 md:mt-0  lg:pt-36 lg:pb-16 2xl:px-16">
+      <div class=" flex flex-col-reverse lg:flex-col relative sm:mt-24 md:mt-0 lg:pb-16 2xl:px-16">
         <div class="flex flex-col lg:flex-row lg:items-center px-4">
           <motion.div
             variants={container_stagger}

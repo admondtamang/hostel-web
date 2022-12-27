@@ -32,3 +32,10 @@ export const cardVariants = {
     },
   },
 };
+
+export const stagger_properties = {
+  initial: "initial",
+  whileInView: "animate",
+  viewport: { once: true, amount: 0.4 },
+  variants: { container_stagger },
+};

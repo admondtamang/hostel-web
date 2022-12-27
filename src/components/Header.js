@@ -5,35 +5,8 @@ import { useRouter } from "next/router";
 import MaterialButton from "./common/button/material";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Svg from "./common/svg";
+import { navData } from "./layouts/data";
 
-const navData = [
-  {
-    name: "Home",
-    route: "/",
-  },
-  {
-    name: "Contact",
-    route: "/contact",
-  },
-  {
-    name: "About",
-    route: "/about",
-  },
-  {
-    name: "Blogs",
-    route: "/blog",
-    children: [
-      {
-        name: "Trending",
-        route: "/blog/trending",
-      },
-      {
-        name: "Latest",
-        route: "/blog/latest",
-      },
-    ],
-  },
-];
 const Header = () => {
   const router = useRouter();
 
@@ -52,10 +25,10 @@ const Header = () => {
         initial={{ opacity: 0, y: -180 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 0.6 }}
-        className="fixed top-0 w-full left-0 right-0 z-40 nc-header-bg shadow-sm dark:border-b dark:border-neutral-900"
+        className="fixed top-0 w-full left-0 right-0 z-40 nc-header-bg shadow-sm dark:border-b dark:border-neutral-900 "
       >
         <div className="nc-MainNav1 relative z-10 2xl:px-16">
-          <div className="px-4 lg:container py-4 lg:py-5 relative flex justify-between items-center mx-auto">
+          <div className="px-4 container py-4 lg:py-5 relative flex justify-between items-center mx-auto">
             <div className="hidden md:flex justify-start flex-1 items-center space-x-4 sm:space-x-10">
               <Link
                 className={`ttnc-logo inline-block focus:outline-none focus:ring-0 w-24 `}
@@ -64,6 +37,7 @@ const Header = () => {
                 <b>LeetTel</b>
               </Link>
 
+              {/* navigation link */}
               <ul className="nc-Navigation hidden lg:flex lg:flex-wrap lg:items-center lg:space-x-1 relative">
                 {navData.map((row, index) => (
                   <li
@@ -116,6 +90,7 @@ const Header = () => {
               </ul>
             </div>
 
+            {/* mobile top navigation */}
             <div className="lg:hidden flex-[3] max-w-lg !mx-auto md:px-3">
               <div className="HeroSearchForm2Mobile">
                 <button className="relative flex items-center w-full border border-neutral-200 dark:border-neutral-6000 px-4 py-2 pr-11 rounded-full shadow-lg">
@@ -155,8 +130,10 @@ const Header = () => {
                 </button>
               </div>
             </div>
-            <div className="hidden md:flex flex-shrink-0 items-center justify-end flex-1 lg:flex-none text-neutral-700 dark:text-neutral-100">
-              <div className="hidden xl:flex items-center space-x-0.5">
+
+            {/* right side nav */}
+            <div className=" flex flex-shrink-0 items-center justify-end flex-1 lg:flex-none text-neutral-700 dark:text-neutral-100">
+              <div className=" flex items-center space-x-0.5">
                 <ToggleDarkMode />
                 <MaterialButton>
                   <Svg>
@@ -172,13 +149,14 @@ const Header = () => {
                     />
                   </Svg>
                 </MaterialButton>
+
                 <div className="px-1"></div>
                 <Link
                   className="nc-Button relative bg-[#4340CA] h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  b disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0 "
                   rel="noopener noreferrer"
                   href="/"
                 >
-                  Sign up
+                  Signup
                 </Link>
               </div>
             </div>

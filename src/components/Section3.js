@@ -97,7 +97,7 @@ const Section3 = (props) => {
                   )
                 }
               >
-                Tab 1
+                Tab
               </Tab>
               <Tab
                 className={({ selected }) =>
