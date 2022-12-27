@@ -16,7 +16,7 @@ const Header = () => {
     damping: 30,
     restDelta: 0.001,
   });
-  console.log(scaleX);
+
   return (
     <header>
       <motion.div className="progress-bar" style={{ scaleX }} />
@@ -110,10 +110,12 @@ const Header = () => {
                     ></path>
                   </svg>
                   <div className="ml-3 flex-1 text-left overflow-hidden">
-                    <span className="block font-medium text-sm">Where to?</span>
-                    <span className="block mt-0.5 text-xs font-light text-neutral-500 dark:text-neutral-400 line-clamp-1">
-                      Anywhere • Any week • Add guests
+                    <span className="block py-2 font-medium text-sm">
+                      Where to?
                     </span>
+                    {/* <span className="block mt-0.5 text-xs font-light text-neutral-500 dark:text-neutral-400 line-clamp-1">
+                      Anywhere • Any week • Add guests
+                    </span> */}
                   </div>
                   <span className="absolute right-2 top-1/2 transform -translate-y-1/2 w-9 h-9 flex items-center justify-center rounded-full border border-neutral-200 dark:border-neutral-6000 dark:text-neutral-300">
                     <svg
@@ -135,7 +137,8 @@ const Header = () => {
             <div className=" flex flex-shrink-0 items-center justify-end flex-1 lg:flex-none text-neutral-700 dark:text-neutral-100">
               <div className=" flex items-center space-x-0.5">
                 <ToggleDarkMode />
-                <MaterialButton>
+
+                <MaterialButton className="hidden lg:block">
                   <Svg>
                     <motion.path
                       initial={false}
@@ -154,7 +157,7 @@ const Header = () => {
                 <Link
                   className="nc-Button relative bg-[#4340CA] h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6  b disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0 "
                   rel="noopener noreferrer"
-                  href="/"
+                  href="/contact"
                 >
                   Signup
                 </Link>

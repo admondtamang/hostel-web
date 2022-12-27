@@ -114,7 +114,7 @@ export default function SwiperCarousel({ swiperData, PlaceComponent }) {
                     delayChildren: 0.2,
                     staggerChildren: 0.1,
                   }}
-                  viewport={{ once: false, amount: 0.2 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   variants={container_stagger}
                 >
                   <motion.div
