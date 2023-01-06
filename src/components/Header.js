@@ -22,9 +22,9 @@ const Header = () => {
       <motion.div className="progress-bar" style={{ scaleX }} />
 
       <motion.div
-        initial={{ opacity: 0, y: -180 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeInOut", duration: 0.6 }}
+        // initial={{ opacity: 0, y: -180 }}
+        // animate={{ opacity: 1, y: 0 }}
+        // transition={{ ease: "easeInOut", duration: 0.4 }}
         className="fixed top-0 w-full left-0 right-0 z-40 nc-header-bg shadow-sm dark:border-b dark:border-neutral-900 "
       >
         <div className="nc-MainNav1 relative z-10 2xl:px-16">
@@ -34,7 +34,7 @@ const Header = () => {
                 className={`ttnc-logo inline-block focus:outline-none focus:ring-0 w-24 `}
                 href="/"
               >
-                <b>LeetTel</b>
+                <b>Leetel</b>
               </Link>
 
               {/* navigation link */}

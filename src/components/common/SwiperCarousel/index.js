@@ -4,7 +4,11 @@ import "swiper/css";
 import { EffectFade } from "swiper";
 import Place from "../../product/place";
 import Image from "../Image";
-import { container_stagger, cardVariants } from "../animationData";
+import {
+  container_stagger,
+  cardVariants,
+  content_variants,
+} from "../animationData";
 import { motion } from "framer-motion";
 
 const SwiperButtons = () => {
@@ -101,46 +105,58 @@ export default function SwiperCarousel({ swiperData, PlaceComponent }) {
         <span slot="container-start" className="relative">
           <SwiperButtons />
         </span>
-        {swiperData?.map((row, index) => {
-          return (
-            <SwiperSlide key={index}>
-              {PlaceComponent ? (
-                Place({ row })
-              ) : (
-                <motion.div
-                  initial="initial"
-                  whileInView="animate"
-                  transition={{
-                    delayChildren: 0.2,
-                    staggerChildren: 0.1,
-                  }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  variants={container_stagger}
-                >
-                  <motion.div
-                    variants={cardVariants}
-                    className="w-full rounded-2xl flex-shrink-0 aspect-w-5 aspect-h-4 relative "
-                  >
-                    <Image
-                      src={row.image}
-                      class="object-cover w-full h-full rounded-2xl"
-                      alt="imgs"
-                    />
-                  </motion.div>
-                  <span class="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-10 transition-opacity"></span>
-                  <motion.div variants={cardVariants} class="mt-4 truncate">
-                    <h2 class="text-base sm:text-lg text-neutral-900 dark:text-neutral-100 font-medium truncate">
-                      {row.name}
-                    </h2>
-                    <span class="block mt-2 text-sm text-neutral-6000 dark:text-neutral-400">
-                      {row.caption}
-                    </span>
-                  </motion.div>
-                </motion.div>
-              )}
-            </SwiperSlide>
-          );
-        })}
+        <motion.div
+          transition={{
+            delayChildren: 0.2,
+            staggerChildren: 0.1,
+          }}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.4 }}
+        >
+          {swiperData?.map((row, index) => {
+            return (
+              <motion.div variants={content_variants} key={index}>
+                <SwiperSlide>
+                  {PlaceComponent ? (
+                    Place({ row })
+                  ) : (
+                    <motion.div
+                      initial="initial"
+                      whileInView="animate"
+                      transition={{
+                        delayChildren: 0.2,
+                        staggerChildren: 0.1,
+                      }}
+                      viewport={{ once: true, amount: 0.2 }}
+                      variants={container_stagger}
+                    >
+                      <motion.div
+                        variants={cardVariants}
+                        className="w-full rounded-2xl flex-shrink-0 aspect-w-5 aspect-h-4 relative "
+                      >
+                        <Image
+                          src={row.image}
+                          class="object-cover w-full h-full rounded-2xl"
+                          alt="imgs"
+                        />
+                      </motion.div>
+                      <span class="opacity-0 group-hover:opacity-100 absolute inset-0 bg-black bg-opacity-10 transition-opacity"></span>
+                      <motion.div variants={cardVariants} class="mt-4 truncate">
+                        <h2 class="text-base sm:text-lg text-neutral-900 dark:text-neutral-100 font-medium truncate">
+                          {row.name}
+                        </h2>
+                        <span class="block mt-2 text-sm text-neutral-6000 dark:text-neutral-400">
+                          {row.caption}
+                        </span>
+                      </motion.div>
+                    </motion.div>
+                  )}
+                </SwiperSlide>
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </Swiper>
     </>
   );

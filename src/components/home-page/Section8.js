@@ -1,7 +1,7 @@
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import SwiperCarousel from "./common/SwiperCarousel";
+import SwiperCarousel from "../common/SwiperCarousel";
 
 const Section8 = () => {
   const swiperData = [

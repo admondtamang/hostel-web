@@ -1,9 +1,9 @@
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import SwiperCarousel from "./common/SwiperCarousel";
+import SwiperCarousel from "../common/SwiperCarousel";
 
-const Section1 = (props) => {
+const HeroSection = (props) => {
   const swiperData = [
     {
       image:
@@ -62,4 +62,4 @@ const Section1 = (props) => {
   );
 };
 
-export default Section1;
+export default HeroSection;

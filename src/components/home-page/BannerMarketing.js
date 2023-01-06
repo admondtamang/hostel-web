@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { cardVariants } from "./common/animationData";
+import { cardVariants } from "../common/animationData";
 
-const Section2 = (props) => {
+const BannerMarketing = (props) => {
   return (
     <div className="OurFeatures relative flex flex-col items-center lg:flex-row lg:py-14 px-4 2xl:px-16">
       <div className="flex-grow">
@@ -71,4 +71,4 @@ const Section2 = (props) => {
   );
 };
 
-export default Section2;
+export default BannerMarketing;

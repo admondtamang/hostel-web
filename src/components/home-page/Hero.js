@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "./common/Image";
+import Image from "../common/Image";
 import { motion, useMotionValue } from "framer-motion";
 
 const Hero = () => {

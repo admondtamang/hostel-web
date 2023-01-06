@@ -1,5 +1,6 @@
 import React from "react";
-
+import { motion } from "framer-motion";
+import { container_stagger, content_variants } from "../common/animationData";
 const review = [
   {
     id: 1,
@@ -48,7 +49,7 @@ const review = [
   },
 ];
 
-const Section6 = () => {
+const ReviewsSection = () => {
   return (
     <div className="customer-info px-4 2xl:px-16">
       <div class="relative py-16">
@@ -62,10 +63,17 @@ const Section6 = () => {
               </span>
             </div>
           </div>
-          <div class="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 ">
+          <motion.div
+            variants={container_stagger}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, amount: 0.4 }}
+            class="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 "
+          >
             {review.map((row, index) => (
-              <div
+              <motion.div
                 key={index}
+                variants={content_variants}
                 class="cards  dark:hover:bg-neutral-700 dark:border-neutral-700 bg-white dark:bg-[#262626] relative flex flex-col items-center justify-center text-center px-3 py-5 sm:px-6 sm:py-7 rounded-[24px] hover:shadow-xl hover:bg-gray-200 transition delay-75"
                 // href="/"
               >
@@ -101,9 +109,9 @@ const Section6 = () => {
                     ></path>
                   </svg>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
           <div class="mt-16 flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-5">
             <button class="relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base px-4 py-3 sm:px-6  ttnc-ButtonSecondary font-medium border bg-white border-neutral-200 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-6000 dark:focus:ring-offset-0">
               Show me more{" "}
@@ -118,4 +126,4 @@ const Section6 = () => {
   );
 };
 
-export default Section6;
+export default ReviewsSection;
